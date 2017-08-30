@@ -26,7 +26,7 @@ You can call the options via the arguments in the cli. Example:
 ./node_modules/.bin/innotec-i18n-extract --fileExt=pug --path=demo
 ```
 
-- fileExt: Defines the extension of your template files. Default is `pug`. (Yes... We love it :-) )
+- fileExt: Defines the extension of your template files. Default is `pug`. ( -- Yes... We love it :-) -- )
 - path: Defines the path where the extractor search your files. Default is `/`.
 
 
