@@ -6,7 +6,7 @@ const watch = require('gulp-watch');
 require('require-dir')('./gulp-tasks');
 
 gulp.task('default', () => {
-  gulp.start('lint');
+  gulp.start([ 'lint', 'mocha' ]);
 });
 
 gulp.task('watch', () => {
