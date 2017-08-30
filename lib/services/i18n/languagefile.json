@@ -1,0 +1,54 @@
+[
+  { "code": "en", "values": {
+      "headers": {
+        "mainheader": "General Innotec Login",
+        "welcome": "Welcome"
+      },
+      "description": {
+        "innoteclogin": "Innotec Login",
+        "sociallogin": "Social Login",
+        "socialprogress": "Login is in progress... Please wait"
+      },
+      "labels": {
+        "username": "Username",
+        "password": "Password",
+        "loginerror": "Something goes wrong..."
+      },
+      "button": {
+        "signin": "Sign In",
+        "signup": "Sign Up",
+        "backtosocial": "Back to Social",
+        "loginfacebook": "Login with Facebook",
+        "logingoogle": "Login with Google",
+        "loginpaypal": "login with PayPal",
+        "logininnotec": "login with InnoTec"
+      }
+    }
+  },
+  { "code": "de", "values": {
+      "headers": {
+        "mainheader": "Innotec Anmeldung",
+        "welcome": "Willkommen"
+      },
+      "description": {
+        "innoteclogin": "Innotec Login",
+        "sociallogin": "Social Login",
+        "socialprogress": "Authentifizierung läuft ..."
+      },
+      "labels": {
+        "username": "Username",
+        "password": "Passwort",
+        "loginerror": "Uuups.. Irgendwas ging schief"
+      },
+      "button": {
+        "signin": "Login",
+        "signup": "Registrieren",
+        "backtosocial": "Zurück",
+        "loginfacebook": "Login mit Facebook",
+        "logingoogle": "Login mit Google",
+        "loginpaypal": "Login mit PayPal",
+        "logininnotec": "Login mit InnoTec"
+      }
+    }
+  }
+]
