@@ -85,3 +85,5 @@ __build__/**
 # IDE #
 .idea/
 *.swp
+
+package-lock.json

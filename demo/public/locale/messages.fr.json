@@ -1,0 +1,50 @@
+[
+  {
+    "term": "Playground: ",
+    "definition": "Cour de récréation:",
+    "context": "getting-started.pug",
+    "term_plural": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Your actual Browser Language: ",
+    "definition": "Votre langue de navigateur:",
+    "context": "getting-started.pug",
+    "term_plural": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "I am a translated text.",
+    "definition": "Je suis un texte traduit.",
+    "context": "getting-started.pug",
+    "term_plural": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Attention! I love Innotec...",
+    "definition": "Attention! J'aime Innotec ...",
+    "context": "getting-started.pug",
+    "term_plural": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Here you can change the Language: ",
+    "definition": "Ici vous pouvez changer la langue:",
+    "context": "getting-started.pug",
+    "term_plural": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "@innotec/ngx-i18n",
+    "definition": "@ Innotec / ngx-i18n",
+    "context": "header.component.pug",
+    "term_plural": "",
+    "reference": "",
+    "comment": ""
+  }
+]

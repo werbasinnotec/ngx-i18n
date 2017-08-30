@@ -65,10 +65,22 @@ Example:
 - templateExt: Defines the extension of your template files. Default is `pug`. ( -- Yes... We love it :-) -- )
 - appPath: Defines the path where the extractor search your files. Default is `/`.
 
+#### Translate your languagefile automatically
+
+```bash
+./node_modules/.bin/innotec-i18n-automaticTranslate --languagecode=de
+```
+
+##### Options
+
+You must define the languagecode of the file where you want to translate.
+
+- languagecode: Define the languagecode
 
 
 (C) 2017 - Werbas AG / Werbas Innotec GmbH
 All rights reserverd!
+
 
 
 
