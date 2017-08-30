@@ -1,0 +1,26 @@
+[
+  {
+    "term": "I am a translated text.",
+    "definition": "Ich bin ein übersetzter Text",
+    "context": "getting-started.pug",
+    "term_plural": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Attention! I love Innotec...",
+    "definition": "Achtung !! Die Gedanken des Menschen sind manchmal unergründlich....",
+    "context": "getting-started.pug",
+    "term_plural": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "@innotec/ngx-i18n",
+    "definition": "Eine Überschrift halt..",
+    "context": "header.component.pug",
+    "term_plural": "",
+    "reference": "",
+    "comment": ""
+  }
+]

@@ -136,6 +136,6 @@
     ],
     "appPath": "demo",
     "templateExt": "pug",
-    "outPath": "/"
+    "outPath": "/demo/public/locale"
   }
 }
