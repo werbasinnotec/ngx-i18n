@@ -22,5 +22,29 @@
     "term_plural": "",
     "reference": "",
     "comment": ""
+  },
+  {
+    "term": "Your actual Browser Language: ",
+    "definition": "",
+    "context": "getting-started.pug",
+    "term_plural": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Playground: ",
+    "definition": "",
+    "context": "getting-started.pug",
+    "term_plural": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Here you can change the Language: ",
+    "definition": "",
+    "context": "getting-started.pug",
+    "term_plural": "",
+    "reference": "",
+    "comment": ""
   }
 ]

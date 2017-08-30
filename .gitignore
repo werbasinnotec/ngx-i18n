@@ -30,8 +30,8 @@ innotec-auth-plugin.js.map
 /index.js
 /index.js.map
 
-lib/services/**/index.js
-lib/services/**/index.js.map
+lib/services/**/*.js
+lib/services/**/*.js.map
 
 lib/pipes/**/.js
 lib/pipes/**/.js.map

@@ -1,14 +1,19 @@
 import { Injectable, Inject } from '@angular/core';
 import { LanguageService } from '../language/language.service';
-
-const languagefile = require('./languagefile.json');
+import { Http } from '@angular/Http';
 
 declare var window: any;
 
 @Injectable()
-export class I18nService {
+export class I18n {
 
-  constructor(@Inject(LanguageService) public lang: LanguageService) {}
+  public filePath: string;
+  public languages: any = [];
+  public acutalLanguage: string;
+  public languageContent: any = [];
+
+  constructor(@Inject(LanguageService) public lang: LanguageService,
+              @Inject(Http) public http: Http) {}
 
   public getBrowserLang() {
     if (typeof window === 'undefined' || typeof window.navigator === 'undefined') {
@@ -26,7 +31,7 @@ export class I18nService {
     return browserLang;
   }
 
-  public getLanguage() {
+  public detectLanguage() {
     if (!localStorage.getItem('locale')) {
       return this.lang.getLanguage(this.getBrowserLang()).code;
     }
@@ -34,37 +39,61 @@ export class I18nService {
     return this.lang.getLanguage(localStorage.getItem('locale')).code;
   }
 
-  public set(langcode) {
-    localStorage.setItem('locale', this.lang.getLanguage(langcode).code)
+  public mapLanguage(code) {
+    if (this.languages.indexOf(code) !== -1) {
+      return code;
+    }
+
+    const mainlng = code.substr(0, 2);
+
+    if (this.languages.indexOf(mainlng) !== -1) {
+      return mainlng;
+    }
+
+    return 'en';
   }
 
-  public get(key) {
-    let code = this.getLanguage();
-
-    let codeindex = languagefile.map(d => {
-        return d.code;
-      }).indexOf(code);
-
-    if (codeindex === -1) {
-      const mainlng = code.substr(0, 2);
-
-      codeindex = languagefile.map(d => {
-        return d.code;
-      }).indexOf(mainlng);
-    }
-
-    if (codeindex === -1) {
-      codeindex = languagefile.map(d => {
-        return d.code;
-      }).indexOf('en');
-    }
-
-    let resolveobj = languagefile[codeindex].values;
-
-    key.split('.').forEach((p) => {
-      resolveobj = resolveobj[p];
+  public loadLanguage(code) {
+    this.http.get(this.filePath + `/messages.${this.acutalLanguage}.json`).subscribe(lang => {
+      this.languageContent = lang.json();
     });
+  }
 
-    return resolveobj;
+  public init(path) {
+    this.filePath = path;
+
+    this.http.get(this.filePath + '/messages.init.json').subscribe(res => {
+      this.languages = res.json().languages;
+      this.acutalLanguage = this.mapLanguage(this.detectLanguage());
+      this.loadLanguage(this.acutalLanguage);
+    });
+  }
+
+  public getAvaiableLanguages() {
+    return this.languages;
+  }
+
+  public getCurrentLanguage() {
+    return this.mapLanguage(this.detectLanguage());
+  }
+
+  public changeLanguage(code) {
+    code = this.lang.getLanguage(code).code;
+    this.acutalLanguage = this.mapLanguage(code);
+    this.loadLanguage(this.acutalLanguage);
+
+    localStorage.setItem('locale', code);
+  }
+
+  public translate(key) {
+    const index = this.languageContent.map((d) => {
+      return d.term;
+    }).indexOf(key);
+
+    if (index !== -1 && this.languageContent[index].definition && this.languageContent[index].definition !== '') {
+      return this.languageContent[index].definition;
+    }
+
+    return key;
   }
 }

@@ -1,13 +1,20 @@
 import { NgModule } from '@angular/core';
 
+import { HttpModule } from '@angular/Http';
 
 // Services
-import { I18nService } from './i18n/i18n.service';
+import { I18n } from './i18n/i18n.service';
 import { LanguageService } from './language/language.service';
 
+export { I18n } from './i18n/i18n.service';
+export { LanguageService } from './language/language.service';
+
 @NgModule({
+  imports: [
+    HttpModule
+  ],
   providers: [
-    I18nService,
+    I18n,
     LanguageService
   ],
   exports: [
@@ -17,6 +24,6 @@ import { LanguageService } from './language/language.service';
 export class InnotecI18nServiceModule {}
 
 export const INNOTEC_I18N_SERVICES: any = [
-  I18nService,
+  I18n,
   LanguageService
 ]

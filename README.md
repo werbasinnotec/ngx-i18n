@@ -30,7 +30,8 @@ After initialize you will found follow keys in your package.json:
   ],
   "appPath": "src",
   "templateExt": "pug",
-  "outPath": "/"
+  "outPath": "/",
+  "publicPath": "/locale"
 }
 ```
 
@@ -39,6 +40,7 @@ After initialize you will found follow keys in your package.json:
 - appPath: Defines the path where your sourecode is reachable. The extractor will run through this folder and extract all keys.
 - templateExt: Defines the extension of your templatefiles. Default is `pug`. ( -- Yes... We love it :-) -- )
 - outPath: Configure the path where the extractor will write / update the languagefiles.
+- publicPath: Defines the publicPath where the languagesfiles are reachable for angular
 
 ### CLI
 

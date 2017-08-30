@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { InnotecI18nServiceModule, I18n } from '../../../../index';
 
 let installation = require('../../../../README.md');
 
@@ -9,4 +10,15 @@ let installation = require('../../../../README.md');
 
 export class GettingStartedSectionComponent {
   public installation: string = installation;
+  public languages: any = [];
+  public langSelector: any;
+  constructor(public i18n: I18n) {}
+
+  ngOnInit() {
+    this.langSelector = this.i18n.getCurrentLanguage();
+  }
+
+  change() {
+    this.i18n.changeLanguage(this.langSelector);
+  }
 }

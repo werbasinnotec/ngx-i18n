@@ -22,5 +22,29 @@
     "term_plural": "",
     "reference": "",
     "comment": ""
+  },
+  {
+    "term": "Your actual Browser Language: ",
+    "definition": "Deine atuelle Browsersprache: ",
+    "context": "getting-started.pug",
+    "term_plural": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Playground: ",
+    "definition": "Spielwiese",
+    "context": "getting-started.pug",
+    "term_plural": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Here you can change the Language: ",
+    "definition": "Hier kannst du die Sprache ändern",
+    "context": "getting-started.pug",
+    "term_plural": "",
+    "reference": "",
+    "comment": ""
   }
 ]

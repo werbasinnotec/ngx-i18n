@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation, Inject } from '@angular/core';
-import { INNOTEC_I18N_SERVICES } from '../../index';
+import { INNOTEC_I18N_SERVICES, I18n } from '../../index';
 
 @Component({
   selector: 'demo', // <my-app></my-app>
@@ -11,10 +11,10 @@ import { INNOTEC_I18N_SERVICES } from '../../index';
 export class AppComponent {
 
 
-  constructor() {
+  constructor(public i18n: I18n) {
   }
 
   ngOnInit() {
-
+    this.i18n.init('/locale');
   }
 }
