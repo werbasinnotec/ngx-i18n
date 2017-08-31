@@ -42,6 +42,30 @@ After initialize you will found follow keys in your package.json:
 - outPath: Configure the path where the extractor will write / update the languagefiles.
 - publicPath: Defines the publicPath where the languagesfiles are reachable for angular
 
+#### Implementate in your Angular Application.
+
+To use this module in your application it's necessary to initialize the module on startup the application. The best place to use this case is the main `app.component`.
+
+Example:
+
+```javascript
+import { I18n } from '@innotec/ngx-i18n'; // Import the I18N Service into your application
+
+.
+.
+
+export class AppComponent {
+  constructor(public i18n: I18n) {
+  }
+
+  ngOnInit() {
+    this.i18n.init('/locale'); // Initialize the Application and define the path where your initfile are present.
+  }
+}
+
+
+```
+
 ### CLI
 
 #### Extract the Terms from the template.
@@ -49,7 +73,7 @@ After initialize you will found follow keys in your package.json:
 ##### CLI Command:
 
 ```bash
-./node_modules/.bin/innotec-i18n-extract
+npm run innotec-i18n-extract
 ```
 
 ##### Options
