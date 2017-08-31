@@ -44,6 +44,40 @@ After initialize you will found follow keys in your package.json:
 
 #### Implementate in your Angular Application.
 
+You must declare the module in your app.module as first:
+
+```
+import { InnotecI18nServiceModule } from '@innotec/ngx-i18n';
+
+@NgModule({
+  imports: [
+    .
+    .
+    InnotecI18nServiceModule
+  ],
+  .
+  .
+})
+```
+
+Then you must set the services as providers in your app component:
+
+```
+import { INNOTEC_I18N_SERVICES, I18n } from '@innotec/ngx-i18n';
+
+
+@Component({
+  selector: 'app',
+  templateUrl: './app.component.pug',
+  styleUrls: [
+    './themecontrol.sass',
+    './app.component.sass'
+  ],
+  providers: [ CheckAuthStatus, INNOTEC_I18N_SERVICES ],
+  encapsulation: ViewEncapsulation.None
+})
+```
+
 To use this module in your application it's necessary to initialize the module on startup the application. The best place to use this case is the main `app.component`.
 
 Example:
