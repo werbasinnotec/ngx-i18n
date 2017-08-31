@@ -25,7 +25,9 @@
     "docs": "typedoc --options typedoc.json src/app/app.component.ts",
     "start": "npm run server",
     "start:hmr": "npm run server -- --hot",
-    "postinstall": "npm run webdriver-update"
+    "postinstall": "npm run webdriver-update",
+    "innotec-i18n-extract": "./node_modules/.bin/innotec-i18n-extract",
+    "innotec-i18n-automaticTranslate": "./node_modules/.bin/innotec-i18n-automaticTranslate"
   },
   "bin": {
     "innotec-i18n-extract": "bin/extract.js",
@@ -134,13 +136,11 @@
     "poeditor": false,
     "languages": [
       "de",
-      "en",
-      "fr",
-      "it"
+      "en"
     ],
-    "appPath": "demo",
+    "appPath": "src",
     "templateExt": "pug",
-    "outPath": "/demo/public/locale",
+    "outPath": "/",
     "publicPath": "/locale"
   }
 }

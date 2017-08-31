@@ -59,7 +59,7 @@ You can call the options via the arguments in the cli. If you are call the comma
 Example:
 
 ```bash
-./node_modules/.bin/innotec-i18n-extract --templateExt=pug --appPath=demo
+npm run innotec-i18n-extract --templateExt=pug --appPath=demo
 ```
 
 - templateExt: Defines the extension of your template files. Default is `pug`. ( -- Yes... We love it :-) -- )
@@ -68,7 +68,7 @@ Example:
 #### Translate your languagefile automatically
 
 ```bash
-./node_modules/.bin/innotec-i18n-automaticTranslate --languagecode=de
+npm run innotec-i18n-automaticTranslate --languagecode=de
 ```
 
 ##### Options
