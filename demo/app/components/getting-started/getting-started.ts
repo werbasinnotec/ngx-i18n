@@ -5,7 +5,7 @@ let installation = require('../../../../README.md');
 
 @Component({
   selector: 'accordion-section',
-  template: require('./getting-started.pug')
+  template: './getting-started.pug'
 })
 
 export class GettingStartedSectionComponent {
@@ -20,5 +20,7 @@ export class GettingStartedSectionComponent {
 
   change() {
     this.i18n.changeLanguage(this.langSelector);
+    this.i18n.innotec-i18n-translate('Sau Cool');
+    this.i18n.innotec-i18n-translate('Sehr Cool');
   }
 }

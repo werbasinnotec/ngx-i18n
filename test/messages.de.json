@@ -4,8 +4,8 @@
     "context": "getting-started.pug"
   },
   {
-    "term": "@innotec/ngx-i18n",
-    "context": "header.component.pug"
+    "term": "I am a translated text.",
+    "context": "getting-started.pug"
   },
   {
     "term": "I am a fine translated text.",

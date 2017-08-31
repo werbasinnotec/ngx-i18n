@@ -48,9 +48,17 @@
     "comment": ""
   },
   {
-    "term": "A good presentation ...",
-    "definition": "Eine schöne Präsentation",
-    "context": "getting-started.pug",
+    "term": "Sau Cool",
+    "definition": "Super Sache",
+    "context": "getting-started.ts",
+    "term_plural": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Sehr Cool",
+    "definition": "",
+    "context": "getting-started.ts",
     "term_plural": "",
     "reference": "",
     "comment": ""
