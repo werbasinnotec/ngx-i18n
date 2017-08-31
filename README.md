@@ -66,6 +66,49 @@ export class AppComponent {
 
 ```
 
+#### Use the Translation Pipe
+
+For Template-Translations the Module provides a translation-pipe who's called `i18n_translate`. To activate this pipe you must provide the pipemodule from i18n in your app module.
+
+```javascript
+import { I18nPipeModule } from '@innotec/ngx-translate';
+
+@NgModule({
+  imports: [
+    .
+    .
+    I18nPipeModule
+  ],
+  .
+  .
+})
+```
+
+So you can call the pipe in your templates:
+
+```
+{{ 'I am a translated text.' | i18n_translate }}
+```
+
+#### i18n Service
+
+The module provides an i18n Service where presents all methods of this module.
+
+Import the class in your application:
+```
+import { I18n } from '@innotec/ngx-translate';
+```
+
+Avaiabled methods:
+
+- init(path: string): Initialize this module.
+- getBrowserLang(): Returns the actual LanguageCode of your Browser.
+- getAvaiableLanguages(): Returns the active languages of your application.
+- getCurrentLanguage(): Returns the current languagecode.
+- observeCurrentLanguage() - Observable: On this function you can observe the current languagecode. If the languagecode in change you can subscribe it. `this.i18n.observeCurrentLanguage().subscribe(res => doAnything())`.
+- changeLanguage(code: string): With this function you can change the language with a valid languagecode. If the code not famous in your application the module changes to the default `en`.
+- translate(key: string) - Observable: On this function you can get and observe a translation in your angular code. `this.i18n.translate('my famous key').subscribe(res => doAnything())`.
+
 ### CLI
 
 #### Extract the Terms from the template.
