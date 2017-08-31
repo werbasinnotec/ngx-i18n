@@ -135,7 +135,8 @@
     "languages": [
       "de",
       "en",
-      "fr"
+      "fr",
+      "it"
     ],
     "appPath": "demo",
     "templateExt": "pug",

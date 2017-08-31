@@ -3,13 +3,18 @@
 .examples
   h3 {{ 'Playground: ' | i18n_translate }}
   
-  span {{ 'Your actual Browser Language: ' | i18n_translate }}  {{ i18n.getBrowserLang() }}
-  br
-  span {{ 'I am a translated text.' | i18n_translate }}
-  br
-  span {{ 'Attention! I love Innotec...' | i18n_translate }}
-  br
-  span {{ 'Here you can change the Language: ' | i18n_translate }}
-  select([(ngModel)]='langSelector', (ngModelChange)='change()')
-    option(*ngFor='let lang of i18n.getAvaiableLanguages()', [value]='lang')
-      | {{ lang }}
+  p
+    span {{ 'Your actual Browser Language: ' | i18n_translate }}  {{ i18n.getBrowserLang() }}
+  
+  p
+    span {{ 'I am a translated text.' | i18n_translate }}
+  
+  p
+    span {{ 'Attention! I love Innotec...' | i18n_translate }}
+    
+  p
+    span {{ 'Here you can change the Language: ' | i18n_translate }}
+    
+    select([(ngModel)]='langSelector', (ngModelChange)='change()')
+      option(*ngFor='let lang of i18n.getAvaiableLanguages()', [value]='lang')
+        | {{ lang }}

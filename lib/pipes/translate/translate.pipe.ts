@@ -1,5 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { I18n } from '../../services/i18n/i18n.service';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Pipe({
   name: 'i18n_translate',
@@ -9,10 +10,12 @@ import { I18n } from '../../services/i18n/i18n.service';
 export class TranslatePipe implements PipeTransform {
   response: any;
 
-  constructor(public i18n: I18n) {}
+  constructor(public i18n: I18n, private sanitizer: DomSanitizer) {}
+
 
   transform(value: any, args: string[]): any {
     let res = this.i18n.translate(value);
+
     return res;
   }
 }

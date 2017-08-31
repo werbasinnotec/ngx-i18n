@@ -1,7 +1,23 @@
 [
   {
+    "term": "Playground: ",
+    "definition": "Terreno di gioco:",
+    "context": "getting-started.pug",
+    "term_plural": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Your actual Browser Language: ",
+    "definition": "La tua lingua reale del browser:",
+    "context": "getting-started.pug",
+    "term_plural": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
     "term": "I am a translated text.",
-    "definition": "",
+    "definition": "Sono un testo tradotto.",
     "context": "getting-started.pug",
     "term_plural": "",
     "reference": "",
@@ -9,39 +25,7 @@
   },
   {
     "term": "Attention! I love Innotec...",
-    "definition": "",
-    "context": "getting-started.pug",
-    "term_plural": "",
-    "reference": "",
-    "comment": ""
-  },
-  {
-    "term": "@innotec/ngx-i18n",
-    "definition": "",
-    "context": "header.component.pug",
-    "term_plural": "",
-    "reference": "",
-    "comment": ""
-  },
-  {
-    "term": "Your actual Browser Language: ",
-    "definition": "",
-    "context": "getting-started.pug",
-    "term_plural": "",
-    "reference": "",
-    "comment": ""
-  },
-  {
-    "term": "Playground: ",
-    "definition": "",
-    "context": "getting-started.pug",
-    "term_plural": "",
-    "reference": "",
-    "comment": ""
-  },
-  {
-    "term": "Here you can change the Language: ",
-    "definition": "",
+    "definition": "Attenzione! Amo Innotec ...",
     "context": "getting-started.pug",
     "term_plural": "",
     "reference": "",
@@ -49,8 +33,24 @@
   },
   {
     "term": "A good presentation ...",
-    "definition": "",
+    "definition": "Una buona presentazione ...",
     "context": "getting-started.pug",
+    "term_plural": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Here you can change the Language: ",
+    "definition": "Qui puoi cambiare la lingua:",
+    "context": "getting-started.pug",
+    "term_plural": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "@innotec/ngx-i18n",
+    "definition": "@ Innotec / ngx-i18n",
+    "context": "header.component.pug",
     "term_plural": "",
     "reference": "",
     "comment": ""
