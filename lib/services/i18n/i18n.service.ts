@@ -1,6 +1,10 @@
-import { Injectable, Inject } from '@angular/core';
+import { Injectable, Inject, EventEmitter } from '@angular/core';
 import { LanguageService } from '../language/language.service';
 import { Http } from '@angular/Http';
+
+import { Observable } from 'rxjs/Observable';
+import { Observer } from "rxjs/Observer";
+import 'rxjs/add/operator/map';
 
 declare var window: any;
 
@@ -11,9 +15,11 @@ export class I18n {
   public languages: any = [];
   public acutalLanguage: string;
   public languageContent: any = [];
+  public changeEvent: any = new EventEmitter;
 
   constructor(@Inject(LanguageService) public lang: LanguageService,
-              @Inject(Http) public http: Http) {}
+              @Inject(Http) public http: Http) {
+              }
 
   public getBrowserLang() {
     if (typeof window === 'undefined' || typeof window.navigator === 'undefined') {
@@ -45,7 +51,6 @@ export class I18n {
     }
 
     const mainlng = code.substr(0, 2);
-
     if (this.languages.indexOf(mainlng) !== -1) {
       return mainlng;
     }
@@ -55,7 +60,13 @@ export class I18n {
 
   public loadLanguage(code) {
     this.http.get(this.filePath + `/messages.${this.acutalLanguage}.json`).subscribe(lang => {
-      this.languageContent = lang.json();
+      this.languageContent = [];
+
+      for (let i in lang.json()) {
+        this.languageContent.push(lang.json()[i]);
+      }
+
+      this.changeEvent.emit();
     });
   }
 
@@ -77,6 +88,20 @@ export class I18n {
     return this.mapLanguage(this.detectLanguage());
   }
 
+  public observeCurrentLanguage(): Observable<string | any> {
+    return Observable.create((observer: Observer<string>) => {
+      let actCode = this.mapLanguage(this.detectLanguage());;
+
+      this.changeEvent.subscribe(() => {
+        actCode = this.mapLanguage(this.detectLanguage());;
+
+        return observer.next(actCode);
+      });
+
+      return observer.next(actCode);
+    });
+  }
+
   public changeLanguage(code) {
     code = this.lang.getLanguage(code).code;
     this.acutalLanguage = this.mapLanguage(code);
@@ -85,7 +110,7 @@ export class I18n {
     localStorage.setItem('locale', code);
   }
 
-  public translate(key) {
+  public getTranslation(key) {
     const index = this.languageContent.map((d) => {
       return d.term;
     }).indexOf(key);
@@ -95,5 +120,19 @@ export class I18n {
     }
 
     return key;
+  }
+
+  public translate(key): Observable<string | any> {
+    return Observable.create((observer: Observer<string>) => {
+      let trans = this.getTranslation(key);
+
+      this.changeEvent.subscribe(() => {
+        trans = this.getTranslation(key);
+
+        return observer.next(trans);
+      });
+
+      return observer.next(trans);
+    });
   }
 }

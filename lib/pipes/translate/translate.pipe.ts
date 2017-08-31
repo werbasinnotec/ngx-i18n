@@ -14,8 +14,6 @@ export class TranslatePipe implements PipeTransform {
 
 
   transform(value: any, args: string[]): any {
-    let res = this.i18n.translate(value);
-
-    return res;
+    return this.i18n.getTranslation(value);
   }
 }
