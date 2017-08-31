@@ -147,14 +147,3 @@ You must define the languagecode of the file where you want to translate.
 
 (C) 2017 - Werbas AG / Werbas Innotec GmbH
 All rights reserverd!
-
-
-
-
-
-
-
-
-
-
--
