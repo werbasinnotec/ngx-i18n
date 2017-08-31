@@ -16,4 +16,13 @@ describe('funcparser....', () => {
     }).is.throwing('Function is called without template');
     done();
   });
+
+  it('... returns an array when process is done', (done) => {
+    const code = "this.translate.innotec-i18n-translate('foobar test')";
+    const res = funcparser(code);
+
+    assert.that(res.length).is.equalTo(1);
+    assert.that(res[0]).is.equalTo('foobar test');
+    done();
+  });
 });
