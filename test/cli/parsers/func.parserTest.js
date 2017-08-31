@@ -18,7 +18,7 @@ describe('funcparser....', () => {
   });
 
   it('... returns an array when process is done', (done) => {
-    const code = "this.translate.innotec-i18n-translate('foobar test')";
+    const code = "this.i18n.translate('foobar test')";
     const res = funcparser(code);
 
     assert.that(res.length).is.equalTo(1);

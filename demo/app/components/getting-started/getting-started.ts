@@ -20,7 +20,7 @@ export class GettingStartedSectionComponent {
 
   change() {
     this.i18n.changeLanguage(this.langSelector);
-    this.i18n.innotec-i18n-translate('Sau Cool');
-    this.i18n.innotec-i18n-translate('Sehr Cool');
+    this.i18n.translate('Sau Cool');
+    this.i18n.translate('Sehr Cool');
   }
 }
