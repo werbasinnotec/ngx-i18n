@@ -13,6 +13,6 @@ export class TranslatePipe implements PipeTransform {
 
 
   transform(value: any, args: string[]): any {
-    return this.i18n.getTranslation(value);
+    return this.i18n.getTranslation(value, args);
   }
 }

@@ -1,58 +1,77 @@
 [
-  {
-    "term": "I am a translated text.",
-    "definition": "",
-    "context": "getting-started.pug",
-    "term_plural": "",
-    "reference": "",
-    "comment": ""
-  },
-  {
-    "term": "Attention! I love Innotec...",
-    "definition": "",
-    "context": "getting-started.pug",
-    "term_plural": "",
-    "reference": "",
-    "comment": ""
-  },
-  {
-    "term": "@innotec/ngx-i18n",
-    "definition": "",
-    "context": "header.component.pug",
-    "term_plural": "",
-    "reference": "",
-    "comment": ""
-  },
-  {
-    "term": "Your actual Browser Language: ",
-    "definition": "",
-    "context": "getting-started.pug",
-    "term_plural": "",
-    "reference": "",
-    "comment": ""
-  },
-  {
-    "term": "Playground: ",
-    "definition": "",
-    "context": "getting-started.pug",
-    "term_plural": "",
-    "reference": "",
-    "comment": ""
-  },
-  {
-    "term": "Here you can change the Language: ",
-    "definition": "",
-    "context": "getting-started.pug",
-    "term_plural": "",
-    "reference": "",
-    "comment": ""
-  },
-  {
-    "term": "This text is generated over angular backendcode",
-    "definition": "",
-    "context": "getting-started.ts",
-    "term_plural": "",
-    "reference": "",
-    "comment": ""
-  }
+    {
+        "term": "Playground: ",
+        "definition": null,
+        "context": "0.0.5 \/ (getting-started.pug)",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "Your actual Browser Language: ",
+        "definition": null,
+        "context": "0.0.5 \/ (getting-started.pug)",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "I am a translated text.",
+        "definition": null,
+        "context": "0.0.5 \/ (getting-started.pug)",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "Attention! I love Innotec...",
+        "definition": null,
+        "context": "0.0.5 \/ (getting-started.pug)",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "I am a singular String",
+        "definition": {
+            "one": "",
+            "other": ""
+        },
+        "context": "0.0.5 \/ (getting-started.pug)",
+        "term_plural": "plural Text",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "Some numbers: ",
+        "definition": null,
+        "context": "0.0.5 \/ (getting-started.pug)",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "Here you can change the Language: ",
+        "definition": null,
+        "context": "0.0.5 \/ (getting-started.pug)",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "@innotec\/ngx-i18n",
+        "definition": null,
+        "context": "0.0.5 \/ (header.component.pug)",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "This text is generated over angular backendcode",
+        "definition": null,
+        "context": "0.0.5 \/ (getting-started.ts)",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    }
 ]

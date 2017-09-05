@@ -46,12 +46,20 @@ export class I18n {
   }
 
   public mapLanguage(code) {
-    if (this.languages.indexOf(code) !== -1) {
+    const index = this.languages.map(d => {
+      return d.code;
+    }).indexOf(code);
+
+    if (index !== -1) {
       return code;
     }
 
     const mainlng = code.substr(0, 2);
-    if (this.languages.indexOf(mainlng) !== -1) {
+    const mainindex = this.languages.map(d => {
+      return d.code;
+    }).indexOf(mainlng);
+
+    if (mainindex !== -1) {
       return mainlng;
     }
 
@@ -110,24 +118,36 @@ export class I18n {
     localStorage.setItem('locale', code);
   }
 
-  public getTranslation(key) {
+  public getTranslation(key, args?) {
     const index = this.languageContent.map((d) => {
       return d.term;
     }).indexOf(key);
 
     if (index !== -1 && this.languageContent[index].definition && this.languageContent[index].definition !== '') {
+      if (args === 'plural' && this.languageContent[index].definition.other) {
+        return this.languageContent[index].definition.other;
+      }
+
+      if (args === 'plural' && this.languageContent[index].definition.one) {
+        return this.languageContent[index].definition.one;
+      }
+
+      if (this.languageContent[index].definition.one) {
+        return this.languageContent[index].definition.one;
+      }
+
       return this.languageContent[index].definition;
     }
 
     return key;
   }
 
-  public translate(key): Observable<string | any> {
+  public translate(key, args?): Observable<string | any> {
     return Observable.create((observer: Observer<string>) => {
-      let trans = this.getTranslation(key);
+      let trans = this.getTranslation(key, args);
 
       this.changeEvent.subscribe(() => {
-        trans = this.getTranslation(key);
+        trans = this.getTranslation(key, args);
 
         return observer.next(trans);
       });

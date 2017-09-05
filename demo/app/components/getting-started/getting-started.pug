@@ -13,6 +13,9 @@
     span {{ 'Attention! I love Innotec...' | i18n_translate }}
     
   p
+    span {{ 'I am a singular String' | i18n_translate }} - {{ 'I am a singular String' | i18n_translate: 'plural' }}
+    
+  p
     span {{ backendProp }}
     
   p 
@@ -30,5 +33,5 @@
     span {{ 'Here you can change the Language: ' | i18n_translate }}
     
     select([(ngModel)]='langSelector', (ngModelChange)='change()')
-      option(*ngFor='let lang of i18n.getAvaiableLanguages()', [value]='lang')
-        | {{ lang }}
+      option(*ngFor='let lang of i18n.getAvaiableLanguages()', [value]='lang.code')
+        | {{ lang.name }}

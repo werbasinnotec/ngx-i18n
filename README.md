@@ -124,6 +124,12 @@ So you can call the pipe in your templates:
 {{ 'I am a translated text.' | i18n_translate }}
 ```
 
+Get Plural Text information:
+
+```
+{{ 'I am a translated text.' | i18n_translate: 'plural' }}
+```
+
 #### i18n Service
 
 The module provides an i18n Service where presents all methods of this module.
@@ -177,6 +183,55 @@ npm run innotec-i18n-automaticTranslate --languagecode=de
 You must define the languagecode of the file where you want to translate.
 
 - languagecode: Define the languagecode
+
+
+### Use the Module with PO Editor
+
+This module provides a complete integration of the [POEditor Cloud Service from Code Whale](https://poeditor.com).
+
+When you like to use this integration it's necessary to change your configuration in the package.json.
+
+```
+"innotecI18nConfig": {
+  "poeditor": {
+    "accesskey": "0b63b695320459516dc31ec351822adc", // The access API key from your account
+    "projectid": 129893 // The project id
+  },
+  "appPath": "demo",
+  "templateExt": "pug",
+  "outPath": "/demo/public/locale",
+  "publicPath": "/locale"
+}
+```
+
+The module use the [node-poeditor module](https://www.npmjs.com/package/node-poeditor) to communicate with the POEditor API.
+
+Integration Steps:
+
+1. Create an account on [PO Editor](https://poeditor.com)
+2. Create a new project in PO Editor
+3. Switch to your account settings in tab API access. Get the API Token and the id from your project on the right side.
+4. Change the settings in your package.json
+
+Sync with PO-Editor:
+
+Example:
+
+```bash
+npm run innotec-i18n-extract
+```
+
+With this command the module will sync all your terms with the PO Editor Service. The Version number will export as tag. So you can split the translations in your versions.
+
+Now you can add some languages and translate it.
+
+PullDown von PO-Editor:
+
+```bash
+npm run innotec-i18n-poeditorimport
+```
+
+The system will generate your language and initfiles. This command is possible to integrate in your build process.
 
 
 ## License
