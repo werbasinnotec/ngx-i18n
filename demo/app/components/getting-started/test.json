@@ -1,0 +1,1 @@
+{{ 'I am a text in json.' | i18n_translate }}

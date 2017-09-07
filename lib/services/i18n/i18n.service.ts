@@ -1,6 +1,6 @@
 import { Injectable, Inject, EventEmitter } from '@angular/core';
 import { LanguageService } from '../language/language.service';
-import { Http } from '@angular/Http';
+import { Http } from '@angular/http';
 
 import { Observable } from 'rxjs/Observable';
 import { Observer } from "rxjs/Observer";
