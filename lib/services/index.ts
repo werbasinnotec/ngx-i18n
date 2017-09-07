@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 
-import { HttpModule } from '@angular/Http';
+import { HttpModule } from '@angular/http';
 
 // Services
 import { I18n } from './i18n/i18n.service';
