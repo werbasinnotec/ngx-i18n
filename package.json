@@ -1,6 +1,6 @@
 {
   "name": "@innotec/ngx-i18n",
-  "version": "0.0.12",
+  "version": "0.1.0",
   "license": "MIT",
   "scripts": {
     "clean": "rimraf node_modules doc dist && npm cache clean",

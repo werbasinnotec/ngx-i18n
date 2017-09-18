@@ -46,8 +46,10 @@ export class I18n {
   }
 
   public mapLanguage(code) {
+    code = code.toLowerCase();
+
     const index = this.languages.map(d => {
-      return d.code;
+      return d.code.toLowerCase();
     }).indexOf(code);
 
     if (index !== -1) {
