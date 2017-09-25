@@ -4,7 +4,7 @@ const gulp = require('gulp');
 const mocha = require('gulp-mocha');
 
 gulp.task('mocha', () => {
-  return gulp.src('./test/cli/**/*Test.js', { read: false }).
+  return gulp.src('./lib/cli/**/*.spec.js', { read: false }).
 	pipe(mocha({ timeout: 105000 })).
 	once('error', function (err) {
   /* eslint-disable no-console */
