@@ -23,7 +23,6 @@ After initialize you will found follow keys in your package.json:
 
 ```json
 "innotecI18nConfig": {
-  "poeditor": false,
   "languages": [
     "de",
     "en"
@@ -35,7 +34,6 @@ After initialize you will found follow keys in your package.json:
 }
 ```
 
-- poeditor: Coming soon
 - languages: Configure an array with all languages where you like to support
 - appPath: Defines the path where your sourecode is reachable. The extractor will run through this folder and extract all keys.
 - templateExt: Defines the extension of your templatefiles. Default is `pug`. ( -- Yes... We love it :-) -- )
@@ -225,7 +223,7 @@ With this command the module will sync all your terms with the PO Editor Service
 
 Now you can add some languages and translate it.
 
-PullDown von PO-Editor:
+PullDown from PO-Editor:
 
 ```bash
 npm run innotec-i18n-poeditorimport

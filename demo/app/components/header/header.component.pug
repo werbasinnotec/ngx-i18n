@@ -1,10 +1,9 @@
-header.clearfix
-  .container
-    .header-left
-      h3 {{ '@innotec/ngx-i18n' | i18n_translate }}
-    .header-right
-      label(for='open')
-        span.hidden-desktop
-      input#open(type='checkbox', name='')
+.appheader
+  md-toolbar
+    .logo
 
-        
+    span.header_space_filler
+      
+    .title
+      h5 {{ '@innotec/i18n solution for Angular' | i18n_translate }}
+      small Powered by Innotec Gmbh Holzgerlingen

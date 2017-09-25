@@ -1,5 +1,8 @@
 import { NgModule, ApplicationRef } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from '@angular/material';
+
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 
@@ -22,7 +25,9 @@ import { HeaderComponent } from './components/header/header.component';
     FormsModule,
     InnotecI18nServiceModule,
     I18nPipeModule,
-    routing
+    routing,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   declarations: [
     // Main and Template Components

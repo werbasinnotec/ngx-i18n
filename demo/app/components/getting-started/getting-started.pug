@@ -1,37 +1,39 @@
-.section([innerHTML]='installation')
-
-.examples
-  h3 {{ 'Playground: ' | i18n_translate }}
-  
-  p
-    span {{ 'Your actual Browser Language: ' | i18n_translate }}  {{ i18n.getBrowserLang() }}
-  
-  p
-    span {{ 'I am a translated text.' | i18n_translate }}
-  
-  p
-    span {{ 'Attention! I love Innotec...' | i18n_translate }}
-    
-  p
-    span {{ 'I am a singular String' | i18n_translate }} - {{ 'I am a singular String' | i18n_translate: 'plural' }}
-    
-  p
-    span {{ backendProp }}
-    
-  p 
-    span {{ 'Some numbers: ' | i18n_translate }} 
-    
-  ul
-    li {{ 4.450 | i18n_number }}
-    li {{ 4450 | i18n_number }} 
-    li {{ 4450.22 | i18n_number }} 
-    li {{ 1045522.22 | i18n_number }}
-    li {{ 1045522.222 | i18n_number:{ style: 'currency', currency: 'EUR' } }}
-    li {{ 1045522.222 | i18n_number:{ languagecode: 'ja-JP', style: 'currency', currency: 'JPY' } }}
-    
-  p
-    span {{ 'Here you can change the Language: ' | i18n_translate }}
-    
-    select([(ngModel)]='langSelector', (ngModelChange)='change()')
-      option(*ngFor='let lang of i18n.getAvaiableLanguages()', [value]='lang.code')
-        | {{ lang.name }}
+md-tab-group
+  md-tab(label="{{ 'Getting Started' | i18n_translate }}")
+    .section([innerHTML]='installation')    
+            
+  md-tab(label="{{ 'Playground' | i18n_translate }}")
+    .examples
+      h3 {{ 'Playground: ' | i18n_translate }}
+      
+      p
+        span {{ 'Your actual Browser Language: ' | i18n_translate }}  {{ i18n.getBrowserLang() }}
+      
+      p
+        span {{ 'I am a translated text.' | i18n_translate }}
+      
+      p
+        span {{ 'Attention! I love Innotec...' | i18n_translate }}
+        
+      p
+        span {{ 'I am a singular String' | i18n_translate }} - {{ 'I am a singular String' | i18n_translate: 'plural' }}
+        
+      p
+        span {{ backendProp }}
+        
+      p 
+        span {{ 'Some numbers: ' | i18n_translate }} 
+        
+      ul
+        li {{ 4.450 | i18n_number }}
+        li {{ 4450 | i18n_number }} 
+        li {{ 4450.22 | i18n_number }} 
+        li {{ 1045522.22 | i18n_number }}
+        li {{ 1045522.222 | i18n_number:{ style: 'currency', currency: 'EUR' } }}
+        
+      p
+        span {{ 'Here you can change the Language: ' | i18n_translate }}
+        
+        select([(ngModel)]='langSelector', (ngModelChange)='change()')
+          option(*ngFor='let lang of i18n.getAvaiableLanguages()', [value]='lang.code')
+            | {{ lang.name }}
