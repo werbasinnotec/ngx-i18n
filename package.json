@@ -18,7 +18,7 @@
     "e2e": "protractor",
     "e2e-live": "protractor --elementExplorer",
     "pretest": "npm run lint",
-    "test": "npm run create ",
+    "test": "gulp && npm run create && karma start",
     "posttest": "",
     "test-watch": "karma start --no-single-run --auto-watch",
     "ci": "npm run e2e && npm run test",

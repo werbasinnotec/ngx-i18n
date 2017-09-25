@@ -85,6 +85,7 @@ export class I18n {
 
     this.http.get(this.filePath + '/messages.init.json').subscribe(res => {
       this.languages = res.json().languages;
+
       this.acutalLanguage = this.mapLanguage(this.detectLanguage());
       this.loadLanguage(this.acutalLanguage);
     });

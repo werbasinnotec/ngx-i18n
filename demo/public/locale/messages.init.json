@@ -1,7 +1,13 @@
 {
   "languages": [
-    "de",
-    "en"
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "de",
+      "name": "German"
+    }
   ],
   "path": "/locale"
 }

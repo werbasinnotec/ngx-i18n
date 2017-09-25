@@ -17,7 +17,8 @@ module.exports = function (config) {
 
     // list of files / patterns to load in the browser
     files: [
-      { pattern: './karma-shim.js', watched: false }
+      { pattern: './karma-shim.js', watched: false },
+      { pattern: 'demo/public/locale/*.json', watched: true, served: true, included: false },
     ],
 
     // list of files to exclude
@@ -36,6 +37,10 @@ module.exports = function (config) {
       // i. e.
       stats: 'errors-only'
     },
+
+    // proxies: {
+    //   'http://127.0.0.1:9876/locale/messages.init.json': '/locale/messages.init.json'
+    // },
 
     webpackServer: {
       noInfo: true // please don't spam the console when running in karma!
