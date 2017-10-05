@@ -4,7 +4,7 @@
 ### Installation
 
 ```bash
-npm i --save --save-exact @innotec/auth-plugin
+npm i --save --save-exact @innotec/ngx-i18n
 ```
 
 #### Initialize the module
