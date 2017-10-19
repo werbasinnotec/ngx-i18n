@@ -40,4 +40,12 @@ describe('LanguageService Service', () => {
   it('... must work with all cases', inject([ LanguageService ], (lang) => {
     expect(lang.getLanguage('DE_DE').code).toBe('de-DE');
   }));
+
+  it('... LanguageService.getAll exists', inject([ LanguageService ], (lang) => {
+    expect(lang.getAll).toBeTruthy();
+  }));
+
+  it('... LanguageService.getAll must return all languages', inject([ LanguageService ], (lang) => {
+    expect(lang.getAll().length).toBeGreaterThan(10);
+  }));
 });

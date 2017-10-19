@@ -8,6 +8,10 @@ export class LanguageService {
 
   constructor() {}
 
+  public getAll() {
+    return lang;
+  }
+
   public validate(code) {
     if (!code) {
       throw new Error('No Languagecode is defined');
