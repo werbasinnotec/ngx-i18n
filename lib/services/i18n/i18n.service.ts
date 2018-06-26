@@ -28,12 +28,11 @@ export class I18n {
 
     let browserLang = window.navigator.languages ? window.navigator.languages[0] : null;
     browserLang = browserLang || window.navigator.language || window.navigator.browserLanguage || window.navigator.userLanguage;
+
     if (browserLang.indexOf('-') !== -1) {
-        browserLang = browserLang.split('-')[0];
+        browserLang = browserLang.replace('_', '-');
     }
-    if (browserLang.indexOf('_') !== -1) {
-        browserLang = browserLang.split('_')[0];
-    }
+
     return browserLang;
   }
 
