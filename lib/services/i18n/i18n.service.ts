@@ -79,7 +79,7 @@ export class I18n {
     });
   }
 
-  public init(path) {
+  async init(path): Promise<void>  {
     this.filePath = path;
 
     this.http.get(this.filePath + '/messages.init.json').subscribe(res => {
@@ -87,6 +87,8 @@ export class I18n {
 
       this.acutalLanguage = this.mapLanguage(this.detectLanguage());
       this.loadLanguage(this.acutalLanguage);
+
+      return
     });
   }
 
