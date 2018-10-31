@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="66"
+   height="100"
+   id="svg2484"
+   sodipodi:version="0.32"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="EU-section-without-country.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <metadata
+     id="metadata2524">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:window-height="1377"
+     inkscape:window-width="2560"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     showgrid="true"
+     inkscape:zoom="4.796875"
+     inkscape:cx="-21.298591"
+     inkscape:cy="43.320868"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:current-layer="g3836"
+     inkscape:window-maximized="1"
+     inkscape:snap-global="false"
+     showguides="false"
+     inkscape:guide-bbox="true" />
+  <desc
+     id="desc2486">European flag</desc>
+  <defs
+     id="defs2488">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 270 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="810 : 270 : 1"
+       inkscape:persp3d-origin="405 : 180 : 1"
+       id="perspective2526" />
+    <g
+       id="s">
+      <g
+         id="c">
+        <path
+           id="t"
+           d="M 0,0 0,1 0.5,1 0,0 z"
+           transform="matrix(0.9510565,0.309017,-0.309017,0.9510565,0,-1)"
+           inkscape:connector-curvature="0" />
+        <use
+           xlink:href="#t"
+           transform="scale(-1,1)"
+           id="use2493"
+           x="0"
+           y="0"
+           width="810"
+           height="540" />
+      </g>
+      <g
+         id="a">
+        <use
+           xlink:href="#c"
+           transform="matrix(0.309017,0.9510565,-0.9510565,0.309017,0,0)"
+           id="use2496"
+           x="0"
+           y="0"
+           width="810"
+           height="540" />
+        <use
+           xlink:href="#c"
+           transform="matrix(-0.809017,0.5877853,-0.5877853,-0.809017,0,0)"
+           id="use2498"
+           x="0"
+           y="0"
+           width="810"
+           height="540" />
+      </g>
+      <use
+         xlink:href="#a"
+         transform="scale(-1,1)"
+         id="use2500"
+         x="0"
+         y="0"
+         width="810"
+         height="540" />
+    </g>
+    <inkscape:perspective
+       id="perspective2592"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2690"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3833"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <g
+     id="g3836"
+     transform="translate(0,-340)">
+    <g
+       id="g12397"
+       transform="matrix(0.38614791,0,0,0.38614791,-161.63054,285.75728)">
+      <path
+         style="fill:#033fa2;stroke-width:0.75"
+         id="path5"
+         d="m 439.83183,140.66097 c -11.742,0 -21.26025,9.51825 -21.26025,21.26025 v 216.23026 c 0,11.74125 9.51825,21.26025 21.26025,21.26025 h 99.411 V 140.66172 h -99.411 z"
+         inkscape:connector-curvature="0" />
+      <g
+         id="g9"
+         transform="matrix(0.75000002,0,0,0.75000002,401.94483,124.03422)"
+         style="fill:#ffe010;fill-opacity:1">
+        <polygon
+           style="fill:#ffe010;fill-opacity:1"
+           id="polygon11"
+           points="105.251,78.744 100.944,81.863 102.58,76.803 98.282,73.67 103.6,73.662 105.251,68.606 106.902,73.662 112.221,73.67 107.923,76.803 109.559,81.863 " />
+        <polygon
+           style="fill:#ffe010;fill-opacity:1"
+           id="polygon13"
+           points="130.756,85.601 126.449,88.72 128.084,83.659 123.787,80.526 129.105,80.519 130.756,75.463 132.407,80.519 137.726,80.526 133.428,83.659 135.063,88.72 " />
+        <polygon
+           style="fill:#ffe010;fill-opacity:1"
+           id="polygon15"
+           points="149.401,104.342 145.093,107.461 146.729,102.4 142.431,99.268 147.75,99.26 149.401,94.204 151.052,99.26 156.37,99.268 152.072,102.4 153.708,107.461 " />
+        <polygon
+           style="fill:#ffe010;fill-opacity:1"
+           id="polygon17"
+           points="156.284,129.803 151.976,132.922 153.612,127.862 149.314,124.729 154.632,124.721 156.284,119.666 157.935,124.721 163.253,124.729 158.955,127.862 160.591,132.922 " />
+        <polygon
+           style="fill:#ffe010;fill-opacity:1"
+           id="polygon19"
+           points="149.441,155.333 145.133,158.452 146.769,153.392 142.471,150.259 147.79,150.251 149.441,145.195 151.092,150.251 156.41,150.259 152.112,153.392 153.748,158.452 " />
+        <polygon
+           style="fill:#ffe010;fill-opacity:1"
+           id="polygon21"
+           points="130.713,174.032 126.406,177.151 128.042,172.09 123.744,168.958 129.062,168.95 130.713,163.894 132.364,168.95 137.683,168.958 133.385,172.09 135.021,177.151 " />
+        <polygon
+           style="fill:#ffe010;fill-opacity:1"
+           id="polygon23"
+           points="105.179,180.81 100.872,183.929 102.507,178.868 98.209,175.735 103.528,175.728 105.179,170.672 106.83,175.728 112.148,175.735 107.851,178.868 109.486,183.929 " />
+        <polygon
+           style="fill:#ffe010;fill-opacity:1"
+           id="polygon25"
+           points="79.681,174.036 75.374,177.155 77.009,172.094 72.711,168.961 78.03,168.954 79.681,163.898 81.332,168.954 86.65,168.961 82.353,172.094 83.988,177.155 " />
+        <polygon
+           style="fill:#ffe010;fill-opacity:1"
+           id="polygon27"
+           points="61.034,155.371 56.727,158.49 58.362,153.43 54.064,150.297 59.383,150.289 61.034,145.233 62.685,150.289 68.003,150.297 63.706,153.43 65.341,158.49 " />
+        <polygon
+           style="fill:#ffe010;fill-opacity:1"
+           id="polygon29"
+           points="54.222,129.837 49.914,132.957 51.55,127.896 47.252,124.763 52.57,124.755 54.222,119.7 55.873,124.755 61.191,124.763 56.893,127.896 58.529,132.957 " />
+        <polygon
+           style="fill:#ffe010;fill-opacity:1"
+           id="polygon31"
+           points="60.964,104.27 56.656,107.389 58.292,102.329 53.994,99.196 59.312,99.188 60.964,94.132 62.615,99.188 67.933,99.196 63.635,102.329 65.271,107.389 " />
+        <polygon
+           style="fill:#ffe010;fill-opacity:1"
+           id="polygon33"
+           points="79.698,85.566 75.39,88.686 77.026,83.625 72.728,80.492 78.046,80.484 79.698,75.429 81.349,80.484 86.667,80.492 82.369,83.625 84.005,88.686 " />
+      </g>
+    </g>
+  </g>
+</svg>

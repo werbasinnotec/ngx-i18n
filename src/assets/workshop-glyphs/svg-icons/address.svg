@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   viewBox="0 0 100 100"
+   id="svg2"
+   inkscape:version="0.48.4 r9939"
+   width="100%"
+   height="100%"
+   sodipodi:docname="address.svg">
+  <metadata
+     id="metadata51">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>remember-me-active</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs49" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2479"
+     inkscape:window-height="1410"
+     id="namedview47"
+     showgrid="false"
+     inkscape:zoom="7.6266671"
+     inkscape:cx="-50.274779"
+     inkscape:cy="42.685566"
+     inkscape:window-x="81"
+     inkscape:window-y="30"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2"
+     inkscape:snap-bbox="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     units="pc" />
+  <title
+     id="title3003">remember-me-active</title>
+  <path
+     d="m 45.336438,92.546173 c -11.33348,-21.937028 -20.83,-43.772996 -24.10658,-55.42986 -2.52396,-8.979289 -2.093,-14.238115 1.76882,-21.584284 1.62571,-3.092504 2.43331,-4.081596 5.71257,-6.9962794 4.403,-3.913479 8.44743,-6.016609 14.60552,-7.59495402 4.99855,-1.281152 7.53516,-1.235927 13.15301,0.23450002 11.09171,2.903164 18.50613,9.6157274 21.80059,19.7369244 2.31725,7.119018 0.90346,14.602145 -5.97354,31.617746 -5.34651,13.228728 -21.8186,47.426617 -22.84398,47.426617 -0.15836,0 -2.01074,-3.33468 -4.11641,-7.41041 z m 9.89137,-52.878176 c 2.60107,-1.179978 5.39249,-3.89253 6.62155,-6.434473 1.24231,-2.569342 1.23869,-7.062205 -0.008,-9.640606 -1.27035,-2.627808 -4.37677,-5.583173 -7.00635,-6.665655 -2.99538,-1.233075 -7.71555,-1.26973 -10.53194,-0.08178 -2.78571,1.175002 -5.63158,3.769053 -6.99919,6.379863 -1.51189,2.886235 -1.61998,7.159797 -0.2526,9.987129 3.21026,6.637876 11.37904,9.539113 18.17631,6.455526 z"
+     id="pointer"
+     inkscape:connector-curvature="0" />
+</svg>

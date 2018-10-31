@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   width="100"
+   height="100"
+   sodipodi:docname="sign-out.svg">
+  <metadata
+     id="metadata8">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs6" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1018"
+     id="namedview4"
+     showgrid="false"
+     inkscape:zoom="2"
+     inkscape:cx="195.26728"
+     inkscape:cy="126.68947"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <path
+     style="fill:#000000"
+     d="M 49.21875 0.9375 C 40.570711 1.1464761 31.860277 4.8258768 25.65625 10.875 C 21.142854 15.246906 17.767516 21.774405 19.125 28.15625 C 20.467779 33.222166 26.664198 34.648217 31.0625 32.90625 C 36.068978 30.369409 36.85759 25.335079 40.46875 21.46875 C 44.62883 17.014543 51.381744 16.00588 56.71875 18.1875 C 63.459193 21.230737 64.728268 30.879441 59.34375 35.65625 C 53.508237 42.296556 44.593267 46.803734 41.09375 55.34375 C 39.065423 60.604431 39.750081 67.976033 45.03125 69.9375 C 48.155928 70.8373 53.58913 71.361322 55.40625 67 C 57.294204 62.886732 57.744326 58.48251 62.3125 54.40625 C 69.598522 48.709683 78.433384 43.699252 81.6875 34.46875 C 83.696753 28.219943 82.958201 21.054954 79.6875 15.34375 C 74.355346 5.9110888 63.182624 1.5140323 52.90625 1.0625 C 51.680571 0.9483785 50.454184 0.90764627 49.21875 0.9375 z M 48.40625 77.125 C 44.799045 77.353923 41.296861 79.297899 39.625 82.65625 C 36.23111 88.419248 39.817338 96.618989 46.34375 98.0625 C 52.787574 99.972866 59.899888 94.465904 59.65625 87.75 C 59.675126 84.778549 58.395509 81.830215 56.1875 79.84375 C 54.098337 77.805098 51.211854 76.946949 48.40625 77.125 z "
+     id="path3013" />
+</svg>

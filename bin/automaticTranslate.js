@@ -1,3 +1,3 @@
 #! /usr/bin/env node
 
-require('../lib/cli/automaticTranslate');
+require('../original/cli/automaticTranslate');

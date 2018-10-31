@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   viewBox="0 0 100 100"
+   id="svg2"
+   inkscape:version="0.91 r13725"
+   width="100%"
+   height="100%"
+   sodipodi:docname="more.svg">
+  <metadata
+     id="metadata51">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>smartphone</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs49" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2495"
+     inkscape:window-height="1416"
+     id="namedview47"
+     showgrid="false"
+     inkscape:zoom="2.696434"
+     inkscape:cx="95.208132"
+     inkscape:cy="6.011046"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2"
+     inkscape:snap-bbox="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <title
+     id="title7087">smartphone</title>
+  <path
+     style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 13.166016 38.808594 A 10.940375 10.940375 0 0 0 2.2246094 49.748047 A 10.940375 10.940375 0 0 0 13.166016 60.689453 A 10.940375 10.940375 0 0 0 24.105469 49.748047 A 10.940375 10.940375 0 0 0 13.166016 38.808594 z M 50.089844 38.808594 A 10.940375 10.940375 0 0 0 39.148438 49.748047 A 10.940375 10.940375 0 0 0 50.089844 60.689453 A 10.940375 10.940375 0 0 0 61.029297 49.748047 A 10.940375 10.940375 0 0 0 50.089844 38.808594 z M 87.013672 38.808594 A 10.940375 10.940375 0 0 0 76.072266 49.748047 A 10.940375 10.940375 0 0 0 87.013672 60.689453 A 10.940375 10.940375 0 0 0 97.953125 49.748047 A 10.940375 10.940375 0 0 0 87.013672 38.808594 z "
+     id="path7090" />
+</svg>

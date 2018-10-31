@@ -1,0 +1,851 @@
+@font-face {
+  font-family: 'werbasinnotec';
+  src:  url('fonts/werbasinnotec.eot?tkie6e');
+  src:  url('fonts/werbasinnotec.eot?tkie6e#iefix') format('embedded-opentype'),
+    url('fonts/werbasinnotec.ttf?tkie6e') format('truetype'),
+    url('fonts/werbasinnotec.woff?tkie6e') format('woff'),
+    url('fonts/werbasinnotec.svg?tkie6e#werbasinnotec') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'werbasinnotec' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  font-feature-settings: "liga";
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+  font-variant-ligatures: discretionary-ligatures;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ALPR-scan-multicolor .path1:before {
+  content: "\e994";
+  color: rgb(255, 255, 255);
+}
+.icon-ALPR-scan-multicolor .path2:before {
+  content: "\e995";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-ALPR-scan-multicolor .path3:before {
+  content: "\e997";
+  margin-left: -1em;
+  color: rgb(255, 235, 0);
+}
+.icon-ALPR-scan-multicolor .path4:before {
+  content: "\e998";
+  margin-left: -1em;
+  color: rgb(0, 0, 255);
+}
+.icon-ALPR-scan-multicolor .path5:before {
+  content: "\e999";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-ALPR-scan-multicolor .path6:before {
+  content: "\e99a";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-ALPR-scan-multicolor .path7:before {
+  content: "\e99b";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-ALPR-scan-multicolor .path8:before {
+  content: "\e99c";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-ALPR-scan:before {
+  content: "\e98d";
+}
+.icon-goto-to-differend-directions:before {
+  content: "\e975";
+}
+.icon-finger-on-go-button:before {
+  content: "\e996";
+}
+.icon-company:before {
+  content: "\e95b";
+  color: #999;
+}
+.icon-my-account .path1:before {
+  content: "\e95e";
+  color: rgb(0, 159, 215);
+}
+.icon-my-account .path2:before {
+  content: "\e95f";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-my-account .path3:before {
+  content: "\e960";
+  margin-left: -1em;
+  color: rgb(0, 113, 152);
+}
+.icon-shop .path1:before {
+  content: "\e966";
+  color: rgb(153, 153, 153);
+}
+.icon-shop .path2:before {
+  content: "\e967";
+  margin-left: -1em;
+  color: rgb(0, 159, 215);
+}
+.icon-shop .path3:before {
+  content: "\e968";
+  margin-left: -1em;
+  color: rgb(0, 159, 215);
+}
+.icon-user-rights .path1:before {
+  content: "\e969";
+  color: rgb(153, 153, 153);
+}
+.icon-user-rights .path2:before {
+  content: "\e96a";
+  margin-left: -1.052734375em;
+  color: rgb(77, 77, 77);
+}
+.icon-user-rights .path3:before {
+  content: "\e96b";
+  margin-left: -1.052734375em;
+  color: rgb(255, 255, 255);
+}
+.icon-user-rights .path4:before {
+  content: "\e96c";
+  margin-left: -1.052734375em;
+  color: rgb(255, 255, 255);
+}
+.icon-user-rights .path5:before {
+  content: "\e96d";
+  margin-left: -1.052734375em;
+  color: rgb(68, 170, 0);
+}
+.icon-user-rights .path6:before {
+  content: "\e96e";
+  margin-left: -1.052734375em;
+  color: rgb(255, 0, 0);
+}
+.icon-users .path1:before {
+  content: "\e96f";
+  color: rgb(0, 0, 0);
+}
+.icon-users .path2:before {
+  content: "\e970";
+  margin-left: -1em;
+  color: rgb(153, 153, 153);
+}
+.icon-Werbas-blue .path1:before {
+  content: "\e971";
+  color: rgb(0, 159, 215);
+}
+.icon-Werbas-blue .path2:before {
+  content: "\e972";
+  margin-left: -1.052734375em;
+  color: rgb(255, 255, 255);
+}
+.icon-Werbas-blue .path3:before {
+  content: "\e973";
+  margin-left: -1.052734375em;
+  color: rgb(0, 159, 215);
+}
+.icon-thumb-down:before {
+  content: "\e957";
+}
+.icon-thumb-up:before {
+  content: "\e958";
+}
+.icon-thumbs-up-down:before {
+  content: "\e959";
+}
+.icon-notifications-off:before {
+  content: "\e905";
+}
+.icon-notifications:before {
+  content: "\e906";
+}
+.icon-vpn-lock:before {
+  content: "\e90c";
+}
+.icon-phonelink:before {
+  content: "\e93e";
+}
+.icon-attach-file:before {
+  content: "\e93f";
+}
+.icon-clear:before {
+  content: "\e940";
+}
+.icon-add:before {
+  content: "\e941";
+}
+.icon-textsms:before {
+  content: "\e942";
+}
+.icon-warning:before {
+  content: "\e943";
+}
+.icon-print:before {
+  content: "\e944";
+}
+.icon-lock-open:before {
+  content: "\e945";
+}
+.icon-lock:before {
+  content: "\e946";
+}
+.icon-info:before {
+  content: "\e947";
+}
+.icon-history:before {
+  content: "\e948";
+}
+.icon-extension:before {
+  content: "\e949";
+}
+.icon-change-history:before {
+  content: "\e94a";
+}
+.icon-account-balance:before {
+  content: "\e94b";
+}
+.icon-brand-abarth:before {
+  content: "\e91f";
+}
+.icon-brand-audi:before {
+  content: "\e920";
+}
+.icon-brand-audi-text:before {
+  content: "\e921";
+}
+.icon-brand-bmw:before {
+  content: "\e922";
+}
+.icon-brand-citroen:before {
+  content: "\e923";
+}
+.icon-brand-citroen-text:before {
+  content: "\e924";
+}
+.icon-brand-daf:before {
+  content: "\e925";
+}
+.icon-brand-fiat:before {
+  content: "\e926";
+}
+.icon-brand-iveco:before {
+  content: "\e927";
+}
+.icon-brand-man:before {
+  content: "\e928";
+}
+.icon-brand-mercedes:before {
+  content: "\e929";
+}
+.icon-brand-opel:before {
+  content: "\e92a";
+}
+.icon-brand-peugeot:before {
+  content: "\e92b";
+}
+.icon-brand-peugeot-text:before {
+  content: "\e92c";
+}
+.icon-brand-porsche:before {
+  content: "\e92d";
+}
+.icon-brand-porsche-text:before {
+  content: "\e92e";
+}
+.icon-brand-renault:before {
+  content: "\e92f";
+}
+.icon-brand-seat:before {
+  content: "\e930";
+}
+.icon-brand-unimog:before {
+  content: "\e931";
+}
+.icon-brand-vw:before {
+  content: "\e934";
+}
+.icon-eco-price:before {
+  content: "\e900";
+}
+.icon-cardbox:before {
+  content: "\e936";
+}
+.icon-package-offer:before {
+  content: "\e937";
+}
+.icon-package-offer-favorite:before {
+  content: "\e938";
+}
+.icon--1:before {
+  content: "\e914";
+}
+.icon-+1:before {
+  content: "\e915";
+}
+.icon-delete:before {
+  content: "\e953";
+}
+.icon-delete-forever:before {
+  content: "\e954";
+}
+.icon-shopping-cart-add:before {
+  content: "\e918";
+}
+.icon-shopping-cart:before {
+  content: "\e919";
+}
+.icon-share:before {
+  content: "\e91a";
+}
+.icon-upload:before {
+  content: "\e91b";
+}
+.icon-download:before {
+  content: "\e91c";
+}
+.icon-bookmark:before {
+  content: "\e91d";
+}
+.icon-pencil:before {
+  content: "\e94c";
+}
+.icon-pencil2:before {
+  content: "\e91e";
+}
+.icon-WERBASInnotec-icon:before {
+  content: "\e901";
+}
+.icon-version-tag:before {
+  content: "\e902";
+}
+.icon-registration-plate-sticker:before {
+  content: "\e90d";
+}
+.icon-sort-up:before {
+  content: "\e903";
+}
+.icon-sort-down:before {
+  content: "\e904";
+}
+.icon-undo:before {
+  content: "\e9101";
+}
+.icon-char-0:before {
+  content: "\30";
+}
+.icon-char-1:before {
+  content: "\31";
+}
+.icon-char-2:before {
+  content: "\32";
+}
+.icon-char-3:before {
+  content: "\33";
+}
+.icon-char-4:before {
+  content: "\34";
+}
+.icon-char-5:before {
+  content: "\35";
+}
+.icon-char-6:before {
+  content: "\36";
+}
+.icon-char-7:before {
+  content: "\37";
+}
+.icon-char-8:before {
+  content: "\38";
+}
+.icon-char-9:before {
+  content: "\39";
+}
+.icon-char-A:before {
+  content: "\41";
+}
+.icon-char-AE:before {
+  content: "\c4";
+}
+.icon-char-B:before {
+  content: "\42";
+}
+.icon-char-C:before {
+  content: "\43";
+}
+.icon-char-D:before {
+  content: "\44";
+}
+.icon-char-E:before {
+  content: "\45";
+}
+.icon-char-F:before {
+  content: "\46";
+}
+.icon-char-G:before {
+  content: "\47";
+}
+.icon-char-H:before {
+  content: "\48";
+}
+.icon-char-I:before {
+  content: "\49";
+}
+.icon-char-J:before {
+  content: "\4a";
+}
+.icon-char-K:before {
+  content: "\4b";
+}
+.icon-char-L:before {
+  content: "\4c";
+}
+.icon-char-M:before {
+  content: "\4d";
+}
+.icon-char-N:before {
+  content: "\4e";
+}
+.icon-char-O:before {
+  content: "\4f";
+}
+.icon-char-OE:before {
+  content: "\d6";
+}
+.icon-char-P:before {
+  content: "\50";
+}
+.icon-char-Q:before {
+  content: "\51";
+}
+.icon-char-R:before {
+  content: "\52";
+}
+.icon-char-S:before {
+  content: "\53";
+}
+.icon-char-T:before {
+  content: "\54";
+}
+.icon-char-U:before {
+  content: "\55";
+}
+.icon-char-UE:before {
+  content: "\dc";
+}
+.icon-char-V:before {
+  content: "\56";
+}
+.icon-char-W:before {
+  content: "\57";
+}
+.icon-char-X:before {
+  content: "\58";
+}
+.icon-char-Y:before {
+  content: "\59";
+}
+.icon-char-Z:before {
+  content: "\5a";
+}
+.icon-home:before {
+  content: "\e907";
+}
+.icon-menu:before {
+  content: "\e94d";
+}
+.icon-more-horiz:before {
+  content: "\e94e";
+}
+.icon-more-vert:before {
+  content: "\e94f";
+}
+.icon-sign-out:before {
+  content: "\e1977";
+}
+.icon-fullscreen:before {
+  content: "\e950";
+}
+.icon-fullscreen-exit:before {
+  content: "\e952";
+}
+.icon-settings:before {
+  content: "\e1976";
+}
+.icon-search:before {
+  content: "\e1975";
+}
+.icon-remember-pin:before {
+  content: "\e1970";
+}
+.icon-remember-pin-active:before {
+  content: "\e1971";
+}
+.icon-funnel-empty:before {
+  content: "\e1946";
+}
+.icon-funnel-half:before {
+  content: "\e1948";
+}
+.icon-funnel-full:before {
+  content: "\e1947";
+}
+.icon-collapse:before {
+  content: "\e1934";
+}
+.icon-uncollapse:before {
+  content: "\e198d";
+}
+.icon-dropzone:before {
+  content: "\e1938";
+}
+.icon-emoticon-happy:before {
+  content: "\1f603";
+}
+.icon-emoticon-neutral:before {
+  content: "\1f610";
+}
+.icon-emoticon-sad:before {
+  content: "\1f61e";
+}
+.icon-EU-section-without-country .path1:before {
+  content: "\e193d";
+  color: rgb(255, 225, 27);
+}
+.icon-EU-section-without-country .path2:before {
+  content: "\e193e";
+  margin-left: -0.66015625em;
+  color: rgb(0, 51, 153);
+}
+.icon-customer:before {
+  content: "\e1936";
+}
+.icon-calendar:before {
+  content: "\e1907";
+}
+.icon-hyperlink:before {
+  content: "\e951";
+}
+.icon-address:before {
+  content: "\1e900";
+}
+.icon-email:before {
+  content: "\e939";
+}
+.icon-phone:before {
+  content: "\e196f";
+}
+.icon-smartphone:before {
+  content: "\e978";
+}
+.icon-sms:before {
+  content: "\e979";
+}
+.icon-fax:before {
+  content: "\e1940";
+}
+.icon-file-document:before {
+  content: "\e1942";
+}
+.icon-file-document-type:before {
+  content: "\e908";
+}
+.icon-file-add-document:before {
+  content: "\e1941";
+}
+.icon-file-estimate:before {
+  content: "\e909";
+}
+.icon-file-proposal:before {
+  content: "\e90e";
+}
+.icon-file-calculation:before {
+  content: "\e90a";
+}
+.icon-pen-on-paper-edit:before {
+  content: "\e196c";
+}
+.icon-invoice:before {
+  content: "\e1984";
+}
+.icon-file-picture:before {
+  content: "\e1944";
+}
+.icon-file-pdf:before {
+  content: "\e993";
+}
+.icon-file-document-folder:before {
+  content: "\e90b";
+}
+.icon-archive-folders:before {
+  content: "\e1943";
+}
+.icon-calculate:before {
+  content: "\e90f";
+}
+.icon-creditcards:before {
+  content: "\e935";
+}
+.icon-payment-cash:before {
+  content: "\e9100";
+}
+.icon-history-clock:before {
+  content: "\e194f";
+}
+.icon-cancelled:before {
+  content: "\e1908";
+}
+.icon-open:before {
+  content: "\e962";
+}
+.icon-paid:before {
+  content: "\e963";
+}
+.icon-Patch:before {
+  content: "\e1964";
+}
+.icon-Patch+:before {
+  content: "\e1965";
+}
+.icon-goods-receiption:before {
+  content: "\e194b";
+}
+.icon-warehouse-goods-receiption:before {
+  content: "\e910";
+}
+.icon-warehouse:before {
+  content: "\e911";
+}
+.icon-warehouse-shelf:before {
+  content: "\e912";
+}
+.icon-stocktaking:before {
+  content: "\e913";
+}
+.icon-archive-man-beside-drawer:before {
+  content: "\e1902";
+}
+.icon-warehouse-picking:before {
+  content: "\e990";
+}
+.icon-barcode-scanner:before {
+  content: "\e1904";
+}
+.icon-person-add:before {
+  content: "\e916";
+}
+.icon-person:before {
+  content: "\e196d";
+}
+.icon-user-group-add:before {
+  content: "\e956";
+}
+.icon-user-group:before {
+  content: "\e917";
+}
+.icon-verified-user:before {
+  content: "\e955";
+}
+.icon-person-mechanic:before {
+  content: "\e932";
+}
+.icon-personal-time-recording:before {
+  content: "\e196e";
+}
+.icon-personal-time-recording-stop:before {
+  content: "\e933";
+}
+.icon-arrow-left-dot:before {
+  content: "\e93a";
+}
+.icon-arrow-left-lower-than:before {
+  content: "\e93b";
+}
+.icon-special-char-checkmark:before {
+  content: "\e97c";
+}
+.icon-special-char-minus:before {
+  content: "\e97d";
+}
+.icon-special-char-plus:before {
+  content: "\e97e";
+}
+.icon-special-char-questionmark:before {
+  content: "\e97f";
+}
+.icon-special-char-x-remove:before {
+  content: "\e980";
+}
+.icon-eye-open:before {
+  content: "\e193f";
+}
+.icon-eye-closed:before {
+  content: "\e93c";
+}
+.icon-lineitems:before {
+  content: "\e95d";
+}
+.icon-checklist:before {
+  content: "\e93d";
+}
+.icon-checklist-large:before {
+  content: "\e95a";
+}
+.icon-flag:before {
+  content: "\e1945";
+}
+.icon-dashboard:before {
+  content: "\e1937";
+}
+.icon-statistics:before {
+  content: "\e981";
+}
+.icon-time-start:before {
+  content: "\e987";
+}
+.icon-time-duration:before {
+  content: "\e985";
+}
+.icon-time-end:before {
+  content: "\e986";
+}
+.icon-labour:before {
+  content: "\e95c";
+}
+.icon-workorder:before {
+  content: "\e1901";
+}
+.icon-sparkplug:before {
+  content: "\e97b";
+}
+.icon-cardbox-stack:before {
+  content: "\e961";
+}
+.icon-varnish:before {
+  content: "\e98f";
+}
+.icon-carwash:before {
+  content: "\e190a";
+}
+.icon-booster-cable:before {
+  content: "\e1905";
+}
+.icon-gas-station:before {
+  content: "\e1900";
+}
+.icon-gas-piston:before {
+  content: "\e1949";
+}
+.icon-oil-can:before {
+  content: "\e964";
+}
+.icon-truck:before {
+  content: "\e98b";
+}
+.icon-car:before {
+  content: "\e1909";
+}
+.icon-hazard-triangle:before {
+  content: "\e194e";
+}
+.icon-wheelsandaxles:before {
+  content: "\e991";
+}
+.icon-axle:before {
+  content: "\e1903";
+}
+.icon-tire:before {
+  content: "\e988";
+}
+.icon-truck-wheel:before {
+  content: "\e98c";
+}
+.icon-rim:before {
+  content: "\e974";
+}
+.icon-snowflake:before {
+  content: "\e97a";
+}
+.icon-sun_empty:before {
+  content: "\e984";
+}
+.icon-sun:before {
+  content: "\e983";
+}
+.icon-m+s-tires:before {
+  content: "\e965";
+}
+.icon-winter-wheel:before {
+  content: "\e992";
+}
+.icon-m+s-wheel:before {
+  content: "\e976";
+}
+.icon-summer-wheel:before {
+  content: "\e982";
+}
+.icon-tire-pressure:before {
+  content: "\e989";
+}
+.icon-tire-pressure-2:before {
+  content: "\e98a";
+}
+.icon-group:before {
+  content: "\e977";
+}
+.icon-ungroup:before {
+  content: "\e98e";
+}
+.icon-paypal-logo .path1:before {
+  content: "\e1966";
+  color: rgb(0, 47, 134);
+}
+.icon-paypal-logo .path2:before {
+  content: "\e1967";
+  margin-left: -3em;
+  color: rgb(0, 156, 222);
+}
+.icon-paypal-logo .path3:before {
+  content: "\e1968";
+  margin-left: -3em;
+  color: rgb(0, 48, 135);
+}
+.icon-paypal-logo .path4:before {
+  content: "\e1969";
+  margin-left: -3em;
+  color: rgb(0, 47, 134);
+}
+.icon-paypal-logo .path5:before {
+  content: "\e196a";
+  margin-left: -3em;
+  color: rgb(0, 156, 222);
+}
+.icon-paypal-logo .path6:before {
+  content: "\e196b";
+  margin-left: -3em;
+  color: rgb(1, 32, 105);
+}
+.icon-bug:before {
+  content: "\e1906";
+}

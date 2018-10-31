@@ -1,3 +1,3 @@
 #! /usr/bin/env node
 
-require('../lib/cli/initModule');
+require('../original/cli/initModule');

@@ -1,0 +1,46 @@
+{
+  "_from": "git+https://d5baae874d2acdbdd3250978c3c8b61e41a80dbd:x-oauth-basic@github.com/werbasinnotec/workshop-glyphs.git",
+  "_id": "workshop-glyphs@0.4.3",
+  "_inBundle": false,
+  "_location": "/workshop-glyphs",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "workshop-glyphs@git+https://d5baae874d2acdbdd3250978c3c8b61e41a80dbd:x-oauth-basic@github.com/werbasinnotec/workshop-glyphs.git",
+    "name": "workshop-glyphs",
+    "escapedName": "workshop-glyphs",
+    "rawSpec": "git+https://d5baae874d2acdbdd3250978c3c8b61e41a80dbd:x-oauth-basic@github.com/werbasinnotec/workshop-glyphs.git",
+    "saveSpec": "git+https://d5baae874d2acdbdd3250978c3c8b61e41a80dbd:x-oauth-basic@github.com/werbasinnotec/workshop-glyphs.git",
+    "fetchSpec": "https://d5baae874d2acdbdd3250978c3c8b61e41a80dbd:x-oauth-basic@github.com/werbasinnotec/workshop-glyphs.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+https://d5baae874d2acdbdd3250978c3c8b61e41a80dbd:x-oauth-basic@github.com/werbasinnotec/workshop-glyphs.git#4ed9b56c0afda8b3d1a85539078e1a4462e1b824",
+  "_spec": "workshop-glyphs@git+https://d5baae874d2acdbdd3250978c3c8b61e41a80dbd:x-oauth-basic@github.com/werbasinnotec/workshop-glyphs.git",
+  "_where": "/Users/martinwiesmuller/work/share/innotec-materials",
+  "author": {
+    "name": "Joachim Herwig",
+    "email": "j.herwig@werbasinnotec.com",
+    "url": "werbasinnotec.com"
+  },
+  "bugs": {
+    "url": "https://github.com/werbasinnotec/workshop-glyphs/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "All Innotec Workshop Glyphs",
+  "homepage": "https://github.com/werbasinnotec/workshop-glyphs#readme",
+  "license": "ISC",
+  "main": "rendered/demo.html",
+  "name": "workshop-glyphs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/werbasinnotec/workshop-glyphs.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: This repository contains only svg files and rendered fonts. No tests specified.\" && exit 1"
+  },
+  "version": "0.4.3"
+}

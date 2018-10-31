@@ -1,0 +1,57 @@
+$application_logo_url: url('https://werbasinnotec.com/wp-content/uploads/2016/12/Werbas-innoteclogo_medium.svg') !default
+
+.appheader
+  position: fixed
+  width: 100%
+  top: 0px
+  right: 0px
+  height: 64px
+  z-index: 1
+
+  &.mat-toolbar-row
+    height: 64px !important
+
+  mat-menu
+    font-size: 12px
+
+  .logo::before
+    position: absolute
+    display: inline-block
+    content: $application_logo_url
+    top: 5px
+    margin-left: 20px
+    margin-top: 5px
+    width: auto
+    height: auto
+
+  .title
+    h5
+      font-size: 0.9em
+
+    small
+      font-size: 0.4em
+
+  .toggle
+    cursor: pointer
+
+  .header_space_filler
+    flex: 1 1 auto
+
+  .user
+    display: inline-block
+    width: 30px
+    height: 30px
+    border-radius: 50%
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+
+
+  mat-toolbar-row
+    justify-content: space-between
+
+  @media(max-width: 767px) and (max-width: 530px)
+    .logo
+      transform: scale(0.7)
+      top: 0
+      margin-top: -35px
