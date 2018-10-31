@@ -1,2 +1,2 @@
-src/**/*.spec.ts
-dist/**/*.spec.ts
+src/**/*.spec.js
+dist/**/*.spec.js
