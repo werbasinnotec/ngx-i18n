@@ -6,7 +6,7 @@ module.exports = function (config) {
     basePath: '',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
     files: [
-      { pattern: 'locale/*.json', watched: true, served: true, included: false },
+      { pattern: 'assets/locale/*.json', watched: true, served: true, included: false },
     ],
     exclude: [],
     plugins: [

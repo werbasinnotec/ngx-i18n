@@ -18,7 +18,7 @@ describe('I18n Service', () => {
   }));
 
   it('... I18n.init execute must set different properties', async(inject([ I18n ], (i18n) => {
-    i18n.init('base/locale');
+    i18n.init('base/assets/locale');
 
     setTimeout(() => {
       expect(i18n.acutalLanguage).toBeDefined();
@@ -57,7 +57,7 @@ describe('I18n Service', () => {
   }));
 
   it('... I18n.mapLanguage returns the languagecode when the language is famous', async(inject([ I18n ], (i18n) => {
-    i18n.init('base/locale');
+    i18n.init('base/assets/locale');
 
     setTimeout(() => {
       expect(i18n.mapLanguage('de')).toBe('de');
@@ -65,7 +65,7 @@ describe('I18n Service', () => {
   })));
 
   it('... I18n.mapLanguage returns the main languagecode when the sub language is not famous', async(inject([ I18n ], (i18n) => {
-    i18n.init('base/locale');
+    i18n.init('base/assets/locale');
 
     setTimeout(() => {
       expect(i18n.mapLanguage('de-it')).toBe('de');
@@ -77,7 +77,7 @@ describe('I18n Service', () => {
   }));
 
   it('... I18n.getAvaiableLanguages returns the actual available languages', async(inject([ I18n ], (i18n) => {
-    i18n.init('base/locale');
+    i18n.init('base/assets/locale');
 
     setTimeout(() => {
       expect(i18n.getAvaiableLanguages().length).toBe(2);
@@ -89,7 +89,7 @@ describe('I18n Service', () => {
   }));
 
   it('... I18n.getCurrentLanguage returns the current languages', async(inject([ I18n ], (i18n) => {
-    i18n.init('base/locale');
+    i18n.init('base/assets/locale');
 
     setTimeout(() => {
       expect(i18n.getCurrentLanguage()).toBeDefined();
@@ -101,7 +101,7 @@ describe('I18n Service', () => {
   }));
 
   it('... I18n.getTranslation must response the translation by a term', async(inject([ I18n ], (i18n) => {
-    i18n.init('base/locale');
+    i18n.init('base/assets/locale');
 
     setTimeout(() => {
       expect(i18n.getTranslation('Playground: ')).toBeDefined();
@@ -113,7 +113,7 @@ describe('I18n Service', () => {
   }));
 
   it('... I18n.changeLanguage must change the language', async(inject([ I18n ], (i18n) => {
-    i18n.init('base/locale');
+    i18n.init('base/assets/locale');
 
     setTimeout(() => {
       i18n.changeLanguage('de');
@@ -125,7 +125,7 @@ describe('I18n Service', () => {
   })));
 
   it('... I18n.changeLanguage must change the language -- again back to english', async(inject([ I18n ], (i18n) => {
-    i18n.init('base/locale');
+    i18n.init('base/assets/locale');
 
     setTimeout(() => {
       i18n.changeLanguage('en');
@@ -137,7 +137,7 @@ describe('I18n Service', () => {
   })));
 
   it('... I18n.changeLanguage must change the language to default en when code is not famous', async(inject([ I18n ], (i18n) => {
-    i18n.init('base/locale');
+    i18n.init('base/assets/locale');
 
     setTimeout(() => {
       i18n.changeLanguage('it');
@@ -153,7 +153,7 @@ describe('I18n Service', () => {
   }));
 
   it('... I18n.translate must observe the translation by a term', async(inject([ I18n ], (i18n) => {
-    i18n.init('base/locale');
+    i18n.init('base/assets/locale');
 
     setTimeout(() => {
       i18n.translate('Playground: ').subscribe((d) => {

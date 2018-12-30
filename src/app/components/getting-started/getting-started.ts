@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { InnotecI18nServiceModule, I18n } from '../../../module/index';
+import { I18n } from '../../../module/index';
 
 let installation = require('../../../../README.md');
 

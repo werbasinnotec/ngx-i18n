@@ -16,6 +16,14 @@
         "comment": ""
     },
     {
+        "term": "I am a translated text with directive",
+        "definition": "Eine Übersetzung mithilfe einer Directive",
+        "context": "0.0.5 \/ (getting-started.pug)",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
         "term": "I am a translated text.",
         "definition": "Ich bin ein \u00fcbersetzter Text",
         "context": "0.0.5 \/ (getting-started.pug)",

@@ -9,15 +9,15 @@ const funcParser = require('./parsers/func.parser');
 
 const pkg = require(path.resolve('./package.json'));
 
-if (!pkg.innotecI18nConfig) {
+if (!pkg.i18nConfig) {
   console.error('** Error: Moduleconfiguration are missing. Please run innotec-i18n-init');
 
   process.exit();
 }
 
-let appPath = pkg.innotecI18nConfig.appPath;
-let fileExt = pkg.innotecI18nConfig.templateExt;
-let outPath = pkg.innotecI18nConfig.outPath;
+let appPath = pkg.i18nConfig.appPath;
+let fileExt = pkg.i18nConfig.templateExt;
+let outPath = pkg.i18nConfig.outPath;
 
 process.argv.forEach((val) => {
   if (val.substring(0, 2) === '--') {
@@ -100,10 +100,10 @@ console.log('** Name: ' + pkg.name + ' - Extractortool');
       }
     }
 
-    if (pkg.innotecI18nConfig.poeditor) {
+    if (pkg.i18nConfig.poeditor) {
       const sync = [];
 
-      const term = await poeditor.terms.list(pkg.innotecI18nConfig.poeditor.accesskey, pkg.innotecI18nConfig.poeditor.projectid);
+      const term = await poeditor.terms.list(pkg.i18nConfig.poeditor.accesskey, pkg.i18nConfig.poeditor.projectid);
 
       for (let i = 0; i < obj.length; i++) {
         let tags = [ pkg.version ];
@@ -132,15 +132,15 @@ console.log('** Name: ' + pkg.name + ' - Extractortool');
         sync.push({ term: obj[i].term, context, tags });
       }
 
-      await poeditor.projects.sync(pkg.innotecI18nConfig.poeditor.accesskey, pkg.innotecI18nConfig.poeditor.projectid, sync);
+      await poeditor.projects.sync(pkg.i18nConfig.poeditor.accesskey, pkg.i18nConfig.poeditor.projectid, sync);
     } else {
-      for (let i = 0; i < pkg.innotecI18nConfig.languages.length; i++) {
-        await helpers.createorupdateLangfile(outPath, pkg.innotecI18nConfig.languages[i], obj);
+      for (let i = 0; i < pkg.i18nConfig.languages.length; i++) {
+        await helpers.createorupdateLangfile(outPath, pkg.i18nConfig.languages[i], obj);
       }
 
       await helpers.createInitFile({
-        languages: pkg.innotecI18nConfig.languages,
-        path: pkg.innotecI18nConfig.publicPath
+        languages: pkg.i18nConfig.languages,
+        path: pkg.i18nConfig.publicPath
       }, outPath);
     }
   } catch (err) {

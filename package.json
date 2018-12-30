@@ -2,7 +2,7 @@
   "$schema": "./node_modules/ng-packagr/package.schema.json",
   "name": "@innotec/ngx-i18n",
   "description": "The ngx i18n tool for Angular",
-  "version": "1.4.11",
+  "version": "2.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -21,10 +21,10 @@
     "test"
   ],
   "bin": {
-    "innotec-i18n-extract": "bin/extract.js",
-    "innotec-i18n-init": "bin/initModule.js",
-    "innotec-i18n-poeditorimport": "bin/poeditorImport.js",
-    "innotec-i18n-automaticTranslate": "bin/automaticTranslate.js"
+    "i18n-extract": "bin/extract.js",
+    "i18n-init": "bin/initModule.js",
+    "i18n-poeditorimport": "bin/poeditorImport.js",
+    "i18n-automaticTranslate": "bin/automaticTranslate.js"
   },
   "private": false,
   "ngPackage": {
@@ -117,14 +117,14 @@
   "es2015": "dist/esm2015/innotec-ngx-i18n.js",
   "typings": "dist/innotec-ngx-i18n.d.ts",
   "metadata": "dist/innotec-ngx-i18n.metadata.json",
-  "innotecI18nConfig": {
+  "i18nConfig": {
     "languages": [
       "de",
       "en"
     ],
     "appPath": "src/app",
     "templateExt": "pug",
-    "outPath": "src/app/locale",
-    "publicPath": "/locale"
+    "outPath": "src/assets/locale",
+    "publicPath": "/assets/locale"
   }
 }

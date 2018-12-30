@@ -6,7 +6,7 @@ const helpers = require('./helpers');
 const translate = require('google-translate-api');
 const pkg = require(path.resolve('./package.json'));
 
-if (!pkg.innotecI18nConfig) {
+if (!pkg.i18nConfig) {
   console.error('** Error: Moduleconfiguration are missing. Please run innotec-i18n-init');
 
   process.exit();
@@ -31,7 +31,7 @@ process.argv.forEach((val) => {
 
 (async () => {
   try {
-    const file = './' + pkg.innotecI18nConfig.outPath + '/messages.' + lang + '.json';
+    const file = './' + pkg.i18nConfig.outPath + '/messages.' + lang + '.json';
     const content = JSON.parse(await helpers.readFile(path.resolve(file)));
 
     for (let i = 0; i < content.length; i++) {

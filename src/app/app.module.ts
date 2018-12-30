@@ -1,4 +1,4 @@
-import { NgModule, ApplicationRef } from '@angular/core';
+import { NgModule, ApplicationRef, APP_INITIALIZER } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTabsModule, MatToolbarModule } from '@angular/material';
@@ -11,20 +11,32 @@ import { AppComponent } from './app.component';
 import { routing } from './app.routing';
 
 // Import Innotec Modules
-import { InnotecI18nServiceModule, I18nPipeModule } from '../module/index';
+import { I18nModule, I18n } from '../module/index';
 
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
 
 import { GettingStartedSectionComponent } from './components/getting-started/getting-started';
 import { HeaderComponent } from './components/header/header.component';
 
+// Application Initializor
+export function init_app(i18n: I18n) {
+  return (): Promise<any> => {
+    return new Promise((resolve) => {
+        (async () => {
+          await i18n.init('/assets/locale');
+
+          resolve();
+        })();
+    });
+  };
+}
+
 @NgModule({
   imports: [
     BrowserModule,
     HttpModule,
     FormsModule,
-    InnotecI18nServiceModule,
-    I18nPipeModule,
+    I18nModule,
     routing,
     BrowserAnimationsModule,
     MatTabsModule,
@@ -37,6 +49,12 @@ import { HeaderComponent } from './components/header/header.component';
     HeaderComponent
   ],
   providers: [
+    {
+      provide: APP_INITIALIZER,
+      useFactory: init_app,
+      multi: true,
+      deps: [ I18n ]
+    }
   ],
   bootstrap: [AppComponent]
 })

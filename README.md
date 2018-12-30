@@ -1,5 +1,6 @@
-# Innotec i18n solution for Angular.io
+# @innotec/ngx-i18n - An I18n solution for Angular
 
+This module is an alternative i18n solution for the angular framework. The great advantage of this module is the connectivity to [PO Editor](https://poeditor.com/).
 
 ### Installation
 
@@ -12,17 +13,21 @@ npm i --save --save-exact @innotec/ngx-i18n
 To initialize this module it's necessary to add some keys in your package.json. Please run follow cli Command:
 
 ```bash
-./node_modules/.bin/innotec-i18n-init
+./node_modules/.bin/i18n-init
 ```
 
-This method will add all necessary keys in your package.json.
+This method will add all necessary keys in your package.json without a PO-Editor Configuration. With PO Editor Configuration run the command with follow argument:
+
+```bash
+./node_modules/.bin/i18n-init poeditor=true
+```
 
 #### Configurate the module
 
 After initialize you will found follow keys in your package.json:
 
 ```json
-"innotecI18nConfig": {
+"i18nConfig": {
   "languages": [
     "de",
     "en"
@@ -30,93 +35,89 @@ After initialize you will found follow keys in your package.json:
   "appPath": "src",
   "templateExt": "pug",
   "outPath": "/",
-  "publicPath": "/locale"
+  "publicPath": "/locale",
+  "poeditor": {
+      "accesskey": "<<ACCESS KEY>>",
+      "projectid": 888
+    }
 }
 ```
 
-- languages: Configure an array with all languages where you like to support
+- languages: Configure an array with all languages where you like to support. This key is disabled when module is running with PO-Editor connectivity.
 - appPath: Defines the path where your sourecode is reachable. The extractor will run through this folder and extract all keys.
-- templateExt: Defines the extension of your templatefiles. Default is `pug`. ( -- Yes... We love it :-) -- )
+- templateExt: Defines the extension of your templatefiles. Default is `html`. You can change it to `pug`.
 - outPath: Configure the path where the extractor will write / update the languagefiles.
 - publicPath: Defines the publicPath where the languagesfiles are reachable for angular
+- poeditor.accesskey: Defines the access key to the PO Editor API.
+- poeditor.projectid: Defines the unique identifier of the project in PO Editor.
 
 #### Implementate in your Angular Application.
 
 You must declare the module in your app.module as first:
 
 ```
-import { InnotecI18nServiceModule } from '@innotec/ngx-i18n';
+import { I18nModule } from '@innotec/ngx-i18n';
 
 @NgModule({
   imports: [
     .
     .
-    InnotecI18nServiceModule
+    I18nModule
   ],
   .
   .
 })
 ```
 
-Then you must set the services as providers in your app component:
+Then you must initialize the module on startup your angular project. Here is recommed to use the `APP_INITIALIZER` hook from Angular. You must define it in your `app.module.ts`:
 
 ```
-import { INNOTEC_I18N_SERVICES, I18n } from '@innotec/ngx-i18n';
-
-
-@Component({
-  selector: 'app',
-  templateUrl: './app.component.pug',
-  styleUrls: [
-    './themecontrol.sass',
-    './app.component.sass'
-  ],
-  providers: [ CheckAuthStatus, INNOTEC_I18N_SERVICES ],
-  encapsulation: ViewEncapsulation.None
-})
-```
-
-To use this module in your application it's necessary to initialize the module on startup the application. The best place to use this case is the main `app.component`.
-
-Example:
-
-```javascript
-import { I18n } from '@innotec/ngx-i18n'; // Import the I18N Service into your application
+import { NgModule, APP_INITIALIZER } from '@angular/core';
 
 .
 .
+// Initialize i18n
+export function init_app(i18n: I18n) {
+  return (): Promise<any> => {
+    return new Promise((resolve) => {
+        (async () => {
+          await i18n.init('/assets/locale'); // Describes the path where the messages files are reachable
 
-export class AppComponent {
-  constructor(public i18n: I18n) {
-  }
-
-  ngOnInit() {
-    this.i18n.init('/locale'); // Initialize the Application and define the path where your initfile are present.
-  }
+          resolve();
+        })();
+    });
+  };
 }
+.
+.
 
+@NgModule({
+  imports: [
+    I18nModule
+  ],
+  declarations: [
+    .
+    .
+    .
 
+  ],
+  providers: [
+    {
+      provide: APP_INITIALIZER,
+      useFactory: init_app,
+      multi: true,
+      deps: [ I18n ]
+    }
+  ],
+  bootstrap: [ AppComponent ]
+})
 ```
+
+
 
 #### Use the Translation Pipe
 
-For Template-Translations the Module provides a translation-pipe who's called `i18n_translate`. To activate this pipe you must provide the pipemodule from i18n in your app module.
-
-```javascript
-import { I18nPipeModule } from '@innotec/ngx-translate';
-
-@NgModule({
-  imports: [
-    .
-    .
-    I18nPipeModule
-  ],
-  .
-  .
-})
-```
-
-So you can call the pipe in your templates:
+For Template-Translations this module provides a translation-pipe who's called `i18n_translate`:
 
 ```
 {{ 'I am a translated text.' | i18n_translate }}
@@ -134,7 +135,7 @@ The module provides an i18n Service where presents all methods of this module.
 
 Import the class in your application:
 ```
-import { I18n } from '@innotec/ngx-translate';
+import { I18n } from '@innotec/ngx-i18n';
 ```
 
 Avaiabled methods:
@@ -154,17 +155,19 @@ Avaiabled methods:
 ##### CLI Command:
 
 ```bash
-npm run innotec-i18n-extract
+npm run i18n-extract
 ```
+
+If the PO-Editor configuration are active, the module will export all terms to PO Editor automatically.
 
 ##### Options
 
-You can call the options via the arguments in the cli. If you are call the command with arguments the configuration from your package.json is overwritten!
+You can call the options via the arguments in the cli. If you are call the command with arguments the configuration from your package.json will overwritten!
 
 Example:
 
 ```bash
-npm run innotec-i18n-extract --templateExt=pug --appPath=demo
+npm run i18n-extract --templateExt=pug --appPath=demo
 ```
 
 - templateExt: Defines the extension of your template files. Default is `pug`. ( -- Yes... We love it :-) -- )
@@ -173,7 +176,7 @@ npm run innotec-i18n-extract --templateExt=pug --appPath=demo
 #### Translate your languagefile automatically
 
 ```bash
-npm run innotec-i18n-automaticTranslate --languagecode=de
+npm run i18n-automaticTranslate --languagecode=de
 ```
 
 ##### Options
@@ -183,24 +186,7 @@ You must define the languagecode of the file where you want to translate.
 - languagecode: Define the languagecode
 
 
-### Use the Module with PO Editor
-
-This module provides a complete integration of the [POEditor Cloud Service from Code Whale](https://poeditor.com).
-
-When you like to use this integration it's necessary to change your configuration in the package.json.
-
-```
-"innotecI18nConfig": {
-  "poeditor": {
-    "accesskey": "0b63b695320459516dc31ec351822adc", // The access API key from your account
-    "projectid": 129893 // The project id
-  },
-  "appPath": "demo",
-  "templateExt": "pug",
-  "outPath": "/demo/public/locale",
-  "publicPath": "/locale"
-}
-```
+### Use [POEditor Cloud Service from Code Whale](https://poeditor.com).
 
 The module use the [node-poeditor module](https://www.npmjs.com/package/node-poeditor) to communicate with the POEditor API.
 
@@ -216,26 +202,25 @@ Sync with PO-Editor:
 Example:
 
 ```bash
-npm run innotec-i18n-extract
+npm run i18n-extract
 ```
 
-With this command the module will sync all your terms with the PO Editor Service. The Version number will export as tag. So you can split the translations in your versions.
+With this command the module will sync all your terms with the PO Editor Service. The Version number of your package.json will export as tag. So you can split the translations in your versions.
 
 Now you can add some languages and translate it.
 
 PullDown from PO-Editor:
 
 ```bash
-npm run innotec-i18n-poeditorimport
+npm run i18n-poeditorimport
 ```
 
 The system will generate your language and initfiles. This command is possible to integrate in your build process.
 
-
 ## License
 
 The MIT License (MIT)
-Copyright (c) 2017 Werbasinnotec.
+Copyright (c) 2017 - 2019 Werbasinnotec.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
