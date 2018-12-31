@@ -21,7 +21,7 @@ pkg.i18nConfig = {
     { code: 'de', name: 'Deutsch' }
   ],
   appPath: 'src',
-  templateExt: 'pug',
+  templateExt: 'html',
   outPath: '/',
   publicPath: '/locale'
 };

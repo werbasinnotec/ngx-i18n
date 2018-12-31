@@ -4,19 +4,21 @@ This module is an alternative i18n solution for the angular framework. The great
 
 ### Installation
 
+To install the module you can run:
+
 ```bash
-npm i --save --save-exact @innotec/ngx-i18n
+npm i --save @innotec/ngx-i18n
 ```
 
 #### Initialize the module
 
-To initialize this module it's necessary to add some keys in your package.json. Please run follow cli Command:
+The module need some keys in your package.json that can be running. To set the needed keys, please run follow cli Command:
 
 ```bash
 ./node_modules/.bin/i18n-init
 ```
 
-This method will add all necessary keys in your package.json without a PO-Editor Configuration. With PO Editor Configuration run the command with follow argument:
+This method will add all necessary keys in your package.json, without a PO-Editor configuration. When you like to use this module with a connectivity to PO Editor, run the command with follow argument:
 
 ```bash
 ./node_modules/.bin/i18n-init poeditor=true
@@ -43,13 +45,17 @@ After initialize you will found follow keys in your package.json:
 }
 ```
 
-- languages: Configure an array with all languages where you like to support. This key is disabled when module is running with PO-Editor connectivity.
-- appPath: Defines the path where your sourecode is reachable. The extractor will run through this folder and extract all keys.
+- languages: Configure an array with all languages where you like to support. This key is disabled when module is running with PO-Editor connectivity. In this case this configuration will take over from PO Editor.
+- appPath: Defines the path where your sourecode is reachable. The extractor will run through this folder and extract all keys from your templates and typescript files.
 - templateExt: Defines the extension of your templatefiles. Default is `html`. You can change it to `pug`.
 - outPath: Configure the path where the extractor will write / update the languagefiles.
 - publicPath: Defines the publicPath where the languagesfiles are reachable for angular
 - poeditor.accesskey: Defines the access key to the PO Editor API.
 - poeditor.projectid: Defines the unique identifier of the project in PO Editor.
+
+Attention Information!
+
+The `version` key in your package.json is a main key for this module. This key will export to po-editor. So it's possible to manage the Versions of your application in po-editor, too.
 
 #### Implementate in your Angular Application.
 
@@ -113,7 +119,7 @@ export function init_app(i18n: I18n) {
 })
 ```
 
-
+With this variant it's possible to load the language files on startup your angular project. So all language contents are still avaiable when application is loaded.
 
 #### Use the Translation Pipe
 
@@ -170,7 +176,7 @@ Example:
 npm run i18n-extract --templateExt=pug --appPath=demo
 ```
 
-- templateExt: Defines the extension of your template files. Default is `pug`. ( -- Yes... We love it :-) -- )
+- templateExt: Defines the extension of your template files. Default is `pug`.
 - appPath: Defines the path where the extractor search your files. Default is `/`.
 
 #### Translate your languagefile automatically
@@ -178,6 +184,8 @@ npm run i18n-extract --templateExt=pug --appPath=demo
 ```bash
 npm run i18n-automaticTranslate --languagecode=de
 ```
+
+With this command the module will call the google-translate-api. On startup this command the module loops your language-file and translate all terms over google translate.
 
 ##### Options
 
@@ -220,7 +228,7 @@ The system will generate your language and initfiles. This command is possible t
 ## License
 
 The MIT License (MIT)
-Copyright (c) 2017 - 2019 Werbasinnotec.
+Copyright (c) 2017 - 2019 Werbas Innotec GmbH.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
