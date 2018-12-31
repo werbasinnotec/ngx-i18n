@@ -37,8 +37,8 @@ if (!pkg.scripts) {
   pkg.scripts = {};
 }
 
-pkg.scripts['i18n-extract'] = './node_modules/.bin/innotec-i18n-extract';
-pkg.scripts['i18n-automaticTranslate'] = './node_modules/.bin/innotec-i18n-automaticTranslate';
-pkg.scripts['i18n-poeditorimport'] = './node_modules/.bin/innotec-i18n-poeditorimport';
+pkg.scripts['i18n-extract'] = './node_modules/.bin/i18n-extract';
+pkg.scripts['i18n-automaticTranslate'] = './node_modules/.bin/i18n-automaticTranslate';
+pkg.scripts['i18n-poeditorimport'] = './node_modules/.bin/i18n-poeditorimport';
 
 fs.writeFileSync(path.resolve('./package.json'), JSON.stringify(pkg, null, 2), 'utf8');
