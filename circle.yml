@@ -20,9 +20,6 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
       - run:
-          name: Setup NPM Configuration
-          command: 'echo "//registry.npmjs.org/:_authToken=fcc85cbf-9824-402e-820c-2ed33073f4ca" > .npmrc'
-      - run:
           name: "Install Node SASS"
           command: 'npm install node-sass'
       - run:
