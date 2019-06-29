@@ -1,12 +1,12 @@
 import { inject, TestBed, async, tick } from '@angular/core/testing';
 import { LanguageService } from '../language/language.service';
 import { I18n } from './i18n.service';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('I18n Service', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [ HttpModule ],
+      imports: [ HttpClientModule ],
       providers: [
         I18n, LanguageService
       ]

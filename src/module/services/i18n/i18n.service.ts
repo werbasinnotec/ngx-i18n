@@ -1,6 +1,6 @@
 import { Injectable, Inject, EventEmitter } from '@angular/core';
 import { LanguageService } from '../language/language.service';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 
 import { Observable } from 'rxjs/Observable';
 import { Observer } from "rxjs/Observer";
@@ -18,7 +18,7 @@ export class I18n {
   public changeEvent: any = new EventEmitter;
 
   constructor(@Inject(LanguageService) public lang: LanguageService,
-              @Inject(Http) public http: Http) {
+              @Inject(HttpClient) public http: HttpClient) {
               }
 
   public getBrowserLang() {
@@ -68,11 +68,11 @@ export class I18n {
   }
 
   public loadLanguage(code) {
-    this.http.get(this.filePath + `/messages.${this.acutalLanguage}.json`).subscribe(lang => {
+    this.http.get(this.filePath + `/messages.${this.acutalLanguage}.json`).subscribe((lang: any) => {
       this.languageContent = [];
 
-      for (let i in lang.json()) {
-        this.languageContent.push(lang.json()[i]);
+      for (let i in lang) {
+        this.languageContent.push(lang[i]);
       }
 
       this.changeEvent.emit();
@@ -82,8 +82,8 @@ export class I18n {
   async init(path): Promise<void>  {
     this.filePath = path;
 
-    this.http.get(this.filePath + '/messages.init.json').subscribe(res => {
-      this.languages = res.json().languages;
+    this.http.get(this.filePath + '/messages.init.json').subscribe((res: any) => {
+      this.languages = res.languages;
 
       this.acutalLanguage = this.mapLanguage(this.detectLanguage());
       this.loadLanguage(this.acutalLanguage);

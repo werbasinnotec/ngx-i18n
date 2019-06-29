@@ -4,19 +4,48 @@
  */
 const fs = require('fs');
 const commonCliConfig = 'node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/webpack-configs/common.js';
-const pugRule = '{ test: /.pug$/, use: [ { loader: "apply-loader" }, { loader: "pug-loader" } ] },';
+const pugRules = '{ test: /.pug$/, use: [ { loader: "apply-loader" }, { loader: "pug-loader" } ] },';
 
 fs.readFile(commonCliConfig, (err, data) => {
-  if (err) { throw err; }
+  if (err) throw err;
 
   const configText = data.toString();
   // make sure we don't add the rule if it already exists
-  if (configText.indexOf(pugRule) > -1) { return; }
+  if (configText.indexOf(pugRules) > -1) { return; }
 
   // Insert the pug webpack rule
   const position = configText.indexOf('rules: [') + 8;
-  const output = [configText.slice(0, position), pugRule, configText.slice(position)].join('');
+  const output = [configText.slice(0, position), pugRules, configText.slice(position)].join('');
   const file = fs.openSync(commonCliConfig, 'r+');
-  fs.writeFile(file, output);
-  fs.close(file);
+  fs.writeFile(file, output, error => {
+    if (error)
+      console.error("An error occurred while overwriting Angular CLI's Webpack config");
+
+    fs.close(file, () => {});
+  });
+});
+
+
+/**
+ * Set's directTemplateLoading: false to allow custom pug template loader to work
+ * @see https://github.com/angular/angular-cli/issues/14534
+ */
+const typescriptCliConfig = 'node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/webpack-configs/typescript.js';
+
+fs.readFile(typescriptCliConfig, (err, data) => {
+  if (err) { throw err; }
+
+  const typescriptText = data.toString();
+
+  // update the setting
+  const output = typescriptText.replace('directTemplateLoading: true,', 'directTemplateLoading: false,');
+
+  // rewrite the file
+  const file2 = fs.openSync(typescriptCliConfig, 'r+');
+  fs.writeFile(file2, output, error => {
+    if (error)
+      console.error("An error occurred while overwriting Angular CLI's Webpack config");
+
+    fs.close(file2, () => {});
+  });
 });

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 // Services
 import { I18n } from './services/i18n/i18n.service';
@@ -11,7 +11,7 @@ import { TranslatePipe } from './pipes/translate/translate.pipe';
 
 @NgModule({
   imports: [
-    HttpModule
+    HttpClientModule
   ],
   declarations: [
     TranslatePipe,
