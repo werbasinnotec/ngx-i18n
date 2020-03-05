@@ -2,31 +2,28 @@
 
 const gulp = require('gulp');
 const mocha = require('gulp-mocha');
-const fs = require('fs');
 const copy = require('gulp-copy');
-const shell = require('gulp-shell');
-const inline = require('gulp-ng-pug-to-inline');
 
-gulp.task('copy', function() {
-  gulp.src([ 'src/module/**/*.*' ])
+function taskCopy() {
+  return (gulp.src([ 'src/module/**/*.*' ])
     .pipe(copy('src/transModule', { prefix: 2 }))
-    .pipe(gulp.dest('src/transModule'));
-});
+    .pipe(gulp.dest('src/transModule')));
+};
 
-gulp.task('copy-original', function () {
-  gulp.src([ 'src/transModule/**/*.*' ])
+function taskCopyOriginal () {
+  return (gulp.src([ 'src/transModule/**/*.*' ])
     .pipe(copy('dist/original', { prefix: 2 }))
-    .pipe(gulp.dest('dist/original'));
-});
+    .pipe(gulp.dest('dist/original')));
+};
 
-gulp.task('copy-bin', function () {
-  gulp.src([ 'bin/**/*.*' ])
+function taskCopyBin () {
+  return (gulp.src([ 'bin/**/*.*' ])
     .pipe(copy('dist'))
-    .pipe(gulp.dest('dist'));
-});
+    .pipe(gulp.dest('dist')));
+};
 
-gulp.task('mocha', () => {
-  return gulp.src('./src/module/**/*.spec.js', { read: false }).
+function taskMocha (cb) {
+  return (gulp.src('./src/module/**/*.spec.js', { read: false }).
 	pipe(mocha({ timeout: 105000 })).
 	once('error', function (err) {
   /* eslint-disable no-console */
@@ -35,11 +32,12 @@ gulp.task('mocha', () => {
   process.exit(1);
 	}).
 	once('end', function () {
+  cb();
   process.exit();
-	});
-});
+	}));
+};
 
-
-gulp.task('default', shell.task([
-  'gulp copy'
-]));
+exports.copy = gulp.series(taskCopy);
+exports.copyOriginal = gulp.series(taskCopyOriginal);
+exports.copyBin = gulp.series(taskCopyBin);
+exports.mocha = gulp.series(taskMocha);

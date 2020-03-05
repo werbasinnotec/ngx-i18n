@@ -1,7 +1,8 @@
-import { NgModule, ApplicationRef, APP_INITIALIZER } from '@angular/core';
+import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatTabsModule, MatToolbarModule } from '@angular/material';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -12,8 +13,6 @@ import { routing } from './app.routing';
 
 // Import Innotec Modules
 import { I18nModule, I18n } from '../module/index';
-
-import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
 
 import { GettingStartedSectionComponent } from './components/getting-started/getting-started';
 import { HeaderComponent } from './components/header/header.component';
@@ -58,21 +57,4 @@ export function init_app(i18n: I18n) {
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-  constructor(public appRef: ApplicationRef) {}
-  hmrOnInit(store) {
-    console.log('HMR store', store);
-  }
-  hmrOnDestroy(store) {
-    let cmpLocation = this.appRef.components.map(cmp => cmp.location.nativeElement);
-    // recreate elements
-    store.disposeOldHosts = createNewHosts(cmpLocation);
-    // remove styles
-    removeNgStyles();
-  }
-  hmrAfterDestroy(store) {
-    // display new elements
-    store.disposeOldHosts();
-    delete store.disposeOldHosts;
-  }
-}
+export class AppModule {}
