@@ -2,7 +2,7 @@ import { Injectable, Inject, EventEmitter } from '@angular/core';
 import { LanguageService } from '../language/language.service';
 import { HttpClient } from '@angular/common/http';
 
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 declare var window: any;
 
