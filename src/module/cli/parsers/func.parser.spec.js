@@ -1,6 +1,6 @@
 'use strict';
 
-const assert = require('assertthat');
+const { assert } = require('assertthat');
 const path = require('path');
 const funcparser = require(path.resolve('./src/module/cli/parsers/func.parser'));
 

@@ -135,5 +135,8 @@
       }
     }
   },
-  "defaultProject": "innotec-ngx-i18n"
+  "defaultProject": "innotec-ngx-i18n",
+  "cli": {
+    "analytics": "b358f97a-165f-4abb-b67f-774930f25a49"
+  }
 }

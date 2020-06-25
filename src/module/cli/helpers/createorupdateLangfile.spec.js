@@ -1,6 +1,6 @@
 'use strict';
 
-const assert = require('assertthat');
+const { assert } = require('assertthat');
 const path = require('path');
 const fs = require('fs');
 const createorupdateLangfile = require(path.resolve('./src/module/cli/helpers/createorupdateLangfile'));

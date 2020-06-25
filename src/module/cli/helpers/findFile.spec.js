@@ -1,6 +1,6 @@
 'use strict';
 
-const assert = require('assertthat');
+const { assert } = require('assertthat');
 const path = require('path');
 const findFile = require(path.resolve('./src/module/cli/helpers/findFile'));
 
