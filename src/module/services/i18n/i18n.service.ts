@@ -3,8 +3,6 @@ import { LanguageService } from '../language/language.service';
 import { HttpClient } from '@angular/common/http';
 
 import { Observable } from 'rxjs/Observable';
-import { Observer } from "rxjs/Observer";
-import 'rxjs/add/operator/map';
 
 declare var window: any;
 
@@ -101,7 +99,7 @@ export class I18n {
   }
 
   public observeCurrentLanguage(): Observable<string | any> {
-    return Observable.create((observer: Observer<string>) => {
+    return new Observable((observer) => {
       let actCode = this.mapLanguage(this.detectLanguage());;
 
       this.changeEvent.subscribe(() => {
@@ -147,7 +145,7 @@ export class I18n {
   }
 
   public translate(key, args?): Observable<string | any> {
-    return Observable.create((observer: Observer<string>) => {
+    return new Observable((observer) => {
       let trans = this.getTranslation(key, args);
 
       this.changeEvent.subscribe(() => {
