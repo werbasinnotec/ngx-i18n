@@ -86,6 +86,7 @@ export class I18n {
       this.acutalLanguage = this.mapLanguage(this.detectLanguage());
       this.loadLanguage(this.acutalLanguage);
 
+      document.documentElement.lang = this.acutalLanguage;
       return
     });
   }
@@ -116,7 +117,7 @@ export class I18n {
     code = this.lang.getLanguage(code).code;
     this.acutalLanguage = this.mapLanguage(code);
     this.loadLanguage(this.acutalLanguage);
-
+    document.documentElement.lang = code;
     localStorage.setItem('locale', code);
   }
 
