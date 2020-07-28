@@ -2,7 +2,7 @@
   "$schema": "./node_modules/ng-packagr/package.schema.json",
   "name": "@innotec/ngx-i18n",
   "description": "The ngx i18n tool for Angular",
-  "version": "5.0.3",
+  "version": "5.1.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -39,7 +39,6 @@
     "rxjs": "^6.5.5"
   },
   "dependencies": {
-    "assertthat": "^5.1.1",
     "@angular/animations": "~10.0.0",
     "@angular/cdk": "10.0.0",
     "@angular/common": "~10.0.0",
@@ -51,7 +50,9 @@
     "@angular/platform-browser-dynamic": "~10.0.0",
     "@angular/router": "~10.0.0",
     "@angularclass/hmr": "~2.1.3",
+    "assertthat": "^5.1.1",
     "core-js": "^3.6.5",
+    "date-fns": "2.15.0",
     "google-translate-api": "^2.3.0",
     "lang-validate": "1.2.0",
     "ng-cli-pug-loader": "^0.2.2",

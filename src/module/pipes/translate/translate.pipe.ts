@@ -3,7 +3,7 @@ import { I18n } from '../../services/i18n/i18n.service';
 
 @Pipe({
   name: 'i18n_translate',
-  pure: false
+  pure: true
 })
 
 export class TranslatePipe implements PipeTransform {

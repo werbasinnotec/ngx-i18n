@@ -6,6 +6,8 @@ import { I18n } from './services/i18n/i18n.service';
 import { LanguageService } from './services/language/language.service';
 
 // Pipes
+import { FormatTime } from './pipes/times/formatTime.pipe';
+import { ToLocaleTime } from './pipes/times/toLocaleTime.pipe'
 import { NumberPipe } from './pipes/number/number.pipe';
 import { TranslatePipe } from './pipes/translate/translate.pipe';
 
@@ -14,6 +16,8 @@ import { TranslatePipe } from './pipes/translate/translate.pipe';
     HttpClientModule
   ],
   declarations: [
+    FormatTime,
+    ToLocaleTime,
     TranslatePipe,
     NumberPipe
   ],
@@ -23,7 +27,9 @@ import { TranslatePipe } from './pipes/translate/translate.pipe';
   ],
   exports: [
     TranslatePipe,
-    NumberPipe
+    NumberPipe,
+    FormatTime,
+    ToLocaleTime,
   ]
 })
 
