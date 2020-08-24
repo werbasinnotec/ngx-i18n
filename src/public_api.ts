@@ -1,1 +1,1 @@
-export * from './transModule/index';
+export * from "./transModule/index";
