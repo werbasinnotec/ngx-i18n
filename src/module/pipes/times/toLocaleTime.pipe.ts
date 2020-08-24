@@ -12,7 +12,6 @@ export class ToLocaleTime implements PipeTransform {
 
   private getLocale() {
     const lang = document.documentElement.lang.substr(0, 2);
-    console.log(lang);
 
     switch (lang.toLowerCase()) {
       case "en":
