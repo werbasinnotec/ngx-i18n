@@ -6,7 +6,7 @@
 
 
 const fs = require('fs');
-const commonCliConfig = 'node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/webpack-configs/common.js';
+const commonCliConfig = 'node_modules/@angular-devkit/build-angular/src/webpack/configs/common.js';
 const markdownRule = '{ test: /.md$/, use: [ { loader: "html-loader" }, { loader: "markdown-loader", options: { pedantic: true }} ] },';
 
 fs.readFile(commonCliConfig, (err, data) => {
